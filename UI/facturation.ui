@@ -51,7 +51,7 @@
      <string notr="true">QCheckBox{
     }
 QCheckBox:checked {
-        background-color: #27ae60;
+        background-color: #efefef;
         border: none;
 		padding: 19px 32px;
     }
