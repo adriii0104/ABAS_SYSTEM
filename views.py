@@ -4,7 +4,7 @@ try:
     from PyQt6 import uic, QtCore, QtGui
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
     import sys
-    from SRC.settings import *
+    from SRC.settings import APP_REQUERIMENTS
 except Exception as e:
         QMessageBox.critical("Error", "Error al iniciar la aplicación: " + str(e))
 
@@ -36,10 +36,10 @@ class Login(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/login.ui", self)
-            self.setFixedSize(QSize(680, 330))
+            self.setFixedSize(QSize(480, 440))
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
-            self.app_name.setText(APP_REQUERIMENTS[1])
         except Exception as e:
             QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
 
