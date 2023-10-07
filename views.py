@@ -10,23 +10,44 @@ except Exception as e:
 
 
 
+class Main(QMainWindow):
+    def __init__(self):
+        try:
+            super().__init__()
+            uic.loadUi("UI/mainwindow.ui", self)
+            self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+            QTimer.singleShot(2222, self.open_windows)
+        except Exception as e:
+            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+    def open_windows(self):
+        try:
+            self.close()
+            self.login = Login()
+            self.login.show()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+
 class Login(QMainWindow):
     def __init__(self):
         try:
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
-            uic.loadUi("C:/Users/el_nd/OneDrive/Escritorio/ABAS_SYSTEM/dist/views/_internal/UI/login.ui", self)
-
-            self.setWindowTitle(APP_REQUERIMENTS[1])
+            uic.loadUi("UI/login.ui", self)
             self.setFixedSize(QSize(680, 330))
+            self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
             self.app_name.setText(APP_REQUERIMENTS[1])
-
         except Exception as e:
             QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
 
+
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Login()
+    window = Main()
     window.show()
     sys.exit(app.exec())

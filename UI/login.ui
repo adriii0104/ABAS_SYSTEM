@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../IMGS/a81q5-rmlr3-001.ico</normaloff>../IMGS/a81q5-rmlr3-001.ico</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">*{
 	padding: 0;
@@ -108,12 +112,18 @@ QPushButton{
       <iconset>
        <normaloff>../IMGS/05.png</normaloff>../IMGS/05.png</iconset>
      </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
     </widget>
    </widget>
    <widget class="QLabel" name="version">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>640</x>
       <y>280</y>
       <width>81</width>
       <height>16</height>
@@ -129,7 +139,7 @@ QPushButton{
       <x>-1</x>
       <y>-10</y>
       <width>731</width>
-      <height>71</height>
+      <height>81</height>
      </rect>
     </property>
     <widget class="QLabel" name="app_name">
