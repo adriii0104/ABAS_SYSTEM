@@ -168,7 +168,7 @@ border-radius: 5px;</string>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>410</x>
        <y>3</y>
        <width>31</width>
        <height>31</height>
@@ -191,17 +191,18 @@ border-radius: 5px;</string>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>31</width>
-       <height>16</height>
+       <x>40</x>
+       <y>0</y>
+       <width>81</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 23pt &quot;Bahnschrift Light&quot;;</string>
+      <string notr="true">font: 10pt &quot;Bahnschrift Light&quot;;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>ABAS</string>
+      <string>ABAS System</string>
      </property>
     </widget>
    </widget>
