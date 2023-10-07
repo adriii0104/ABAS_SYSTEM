@@ -1,6 +1,6 @@
 import json
 
-with open('settings.json', 'r') as f:
+with open('C:/Users/el_nd/OneDrive/Escritorio/ABAS_SYSTEM/dist/views/_internal/SRC/settings.json', 'r') as f:
     settings = json.load(f)
 
 
@@ -16,3 +16,9 @@ APP_REQUERIMENTS = (
     language,
     license
 )
+
+
+USER_SESSION = {}
+
+
+PYTHON_VERSION = "3.11.5 ABAS"

@@ -6,37 +6,151 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>706</width>
-    <height>422</height>
+    <width>696</width>
+    <height>320</height>
    </rect>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>16777215</width>
-    <height>16777215</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	padding: 0;
+	margin: 0;
+}
+QPushButton{
+
+}
+#widget{
+}
+#widget_2{
+	background: black;
+}
+#app_name{
+	color: white;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>90</y>
-      <width>101</width>
-      <height>21</height>
+      <x>120</x>
+      <y>70</y>
+      <width>451</width>
+      <height>221</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>90</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Inventario</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMGS/04.png</normaloff>../IMGS/04.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Facturación</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMGS/03.png</normaloff>../IMGS/03.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Reporte</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMGS/05.png</normaloff>../IMGS/05.png</iconset>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="version">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>280</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
     </property>
     <property name="text">
-     <string>Log in</string>
+     <string>TextLabel</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-10</y>
+      <width>731</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="app_name">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>30</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins</family>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
