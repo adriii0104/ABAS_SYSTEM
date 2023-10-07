@@ -53,8 +53,16 @@ class Facturation(QMainWindow):
             self.setFixedSize(QSize(780, 640))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.closes.clicked.connect(self.close_app)
+
         except Exception as e:
             QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+    def close_app(self):
+        try:
+            self.close()
+        except Exception as e:
+            QMessageBox.critical(self, "Error", "Error al cerrar la aplicación: " + str(e))
 
 
 
