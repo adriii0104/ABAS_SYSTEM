@@ -44,10 +44,24 @@ class Login(QMainWindow):
             QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
 
 
+class Facturation(QMainWindow):
+    def __init__(self):
+        try:
+            # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            super().__init__()
+            uic.loadUi("UI/facturation.ui", self)
+            self.setFixedSize(QSize(780, 640))
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+            self.setWindowTitle(APP_REQUERIMENTS[1])
+        except Exception as e:
+            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+
+
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Main()
+    window = Facturation()
     window.show()
     sys.exit(app.exec())
