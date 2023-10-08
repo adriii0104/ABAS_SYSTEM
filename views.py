@@ -5,9 +5,9 @@ try:
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
     import sys
     from SRC.settings import APP_REQUERIMENTS
+    from datetime import datetime
 except Exception as e:
-        QMessageBox.critical("Error", "Error al iniciar la aplicación: " + str(e))
-
+    QMessageBox.critical("Error", "Error al iniciar la aplicación: " + str(e))
 
 
 class Main(QMainWindow):
@@ -19,7 +19,8 @@ class Main(QMainWindow):
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             QTimer.singleShot(2222, self.open_windows)
         except Exception as e:
-            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def open_windows(self):
         try:
@@ -27,7 +28,8 @@ class Main(QMainWindow):
             self.login = Login()
             self.login.show()
         except Exception as e:
-            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
 
 class Login(QMainWindow):
@@ -43,12 +45,15 @@ class Login(QMainWindow):
             self.cerrar.clicked.connect(self.closed)
             self.minimizar.clicked.connect(self.minimizedd)
         except Exception as e:
-            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def closed(self):
         self.close()
+
     def minimizedd(self):
         self.showMinimized()
+
 
 class Facturation(QMainWindow):
     def __init__(self):
@@ -62,17 +67,28 @@ class Facturation(QMainWindow):
             self.closes.clicked.connect(self.close_app)
             self.showMaximized()
 
+            self.timee = QTimer(self)
+            self.timee.timeout.connect(self.timere)
+            self.timee.start(1000)  # 1000 ms = 1 segundo
+
         except Exception as e:
-            QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def close_app(self):
         try:
             self.close()
         except Exception as e:
-            QMessageBox.critical(self, "Error", "Error al cerrar la aplicación: " + str(e))
+            QMessageBox.critical(
+                self, "Error", "Error al cerrar la aplicación: " + str(e))
 
-
-
+    def timere(self):
+        try:
+            self.times = datetime.now().strftime("%H:%M:%S")
+            self.timer.setText(self.times)
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
 
 if __name__ == "__main__":

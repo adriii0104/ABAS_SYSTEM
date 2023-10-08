@@ -198,7 +198,8 @@ margin-left: 0px;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">margin-left:1px;</string>
+      <string notr="true">margin-left:1px;
+font-size: 14px;</string>
      </property>
      <property name="text">
       <string>04:20 PM</string>
@@ -234,9 +235,9 @@ margin-left: 0px;</string>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>90</x>
       <y>0</y>
-      <width>1421</width>
+      <width>1371</width>
       <height>161</height>
      </rect>
     </property>
@@ -366,9 +367,9 @@ margin-left: 0px;</string>
     <widget class="QWidget" name="widget_3" native="true">
      <property name="geometry">
       <rect>
-       <x>960</x>
+       <x>940</x>
        <y>0</y>
-       <width>461</width>
+       <width>431</width>
        <height>161</height>
       </rect>
      </property>
@@ -743,7 +744,7 @@ margin-left: 0px;</string>
      <rect>
       <x>110</x>
       <y>160</y>
-      <width>1381</width>
+      <width>1351</width>
       <height>411</height>
      </rect>
     </property>
@@ -876,9 +877,9 @@ margin-left: 0px;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>540</y>
+      <y>570</y>
       <width>921</width>
-      <height>251</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="styleSheet">
