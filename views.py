@@ -92,18 +92,18 @@ class Facturation(QMainWindow):
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
 
-class assets(QMainWindow):
+class registerassets(QMainWindow):
     def __init__(self):
         try:
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
-            uic.loadUi("UI/assets.ui", self)
+            uic.loadUi("UI/registerassets.ui", self)
             self.setFixedSize(QSize(780, 675))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
-            self.close.clicked.connect(self.close_assets)
-            self.cancel.clicked.connect(self.close_assets)
-            self.minimized.clicked.connect(self.minimized_assets)
+            self.closebutton.clicked.connect(self.close_assets)
+            self.cancelbutton.clicked.connect(self.close_assets)
+            self.minimizedbutton.clicked.connect(self.minimized_assets)
 
         except Exception as e:
             QMessageBox.critical(
@@ -140,6 +140,6 @@ class Module_products_un(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Module_products_un()
+    window = registerassets()
     window.show()
     sys.exit(app.exec())
