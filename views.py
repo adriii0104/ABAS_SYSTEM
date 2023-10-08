@@ -85,7 +85,7 @@ class Facturation(QMainWindow):
     def timere(self):
         try:
             self.times = datetime.now().strftime("%H:%M:%S")
-            self.timer.setText(self.times)
+            self.timering.setText(self.times)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))

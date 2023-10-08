@@ -182,7 +182,7 @@ margin-left: 0px;</string>
       <string>Inventario</string>
      </property>
     </widget>
-    <widget class="QLabel" name="time">
+    <widget class="QLabel" name="timering">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -237,7 +237,7 @@ font-size: 14px;</string>
      <rect>
       <x>90</x>
       <y>0</y>
-      <width>1371</width>
+      <width>1301</width>
       <height>161</height>
      </rect>
     </property>
@@ -369,7 +369,7 @@ font-size: 14px;</string>
       <rect>
        <x>940</x>
        <y>0</y>
-       <width>431</width>
+       <width>361</width>
        <height>161</height>
       </rect>
      </property>
@@ -569,9 +569,9 @@ font-size: 14px;</string>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
      <rect>
-      <x>1030</x>
+      <x>1000</x>
       <y>540</y>
-      <width>461</width>
+      <width>391</width>
       <height>251</height>
      </rect>
     </property>
@@ -619,7 +619,7 @@ font-size: 14px;</string>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>120</x>
        <y>190</y>
        <width>181</width>
        <height>31</height>
@@ -680,7 +680,7 @@ font-size: 14px;</string>
     <widget class="QLineEdit" name="lineEdit_8">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>200</x>
        <y>190</y>
        <width>161</width>
        <height>31</height>
@@ -744,7 +744,7 @@ font-size: 14px;</string>
      <rect>
       <x>110</x>
       <y>160</y>
-      <width>1351</width>
+      <width>1281</width>
       <height>411</height>
      </rect>
     </property>
@@ -958,7 +958,7 @@ border-right: 1px solid black;</string>
      <property name="geometry">
       <rect>
        <x>770</x>
-       <y>180</y>
+       <y>160</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -980,7 +980,7 @@ border-right: 1px solid black;</string>
      <property name="geometry">
       <rect>
        <x>770</x>
-       <y>80</y>
+       <y>60</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -1002,7 +1002,7 @@ border-right: 1px solid black;</string>
      <property name="geometry">
       <rect>
        <x>770</x>
-       <y>30</y>
+       <y>10</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -1024,7 +1024,7 @@ border-right: 1px solid black;</string>
      <property name="geometry">
       <rect>
        <x>770</x>
-       <y>130</y>
+       <y>110</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -1046,7 +1046,7 @@ border-right: 1px solid black;</string>
      <property name="geometry">
       <rect>
        <x>340</x>
-       <y>170</y>
+       <y>150</y>
        <width>41</width>
        <height>16</height>
       </rect>
@@ -1059,7 +1059,7 @@ border-right: 1px solid black;</string>
      <property name="geometry">
       <rect>
        <x>410</x>
-       <y>130</y>
+       <y>110</y>
        <width>331</width>
        <height>91</height>
       </rect>
