@@ -48,11 +48,6 @@ class Login(QMainWindow):
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
-    def close_login(self):
-        self.close()
-
-    def minimized_login(self):
-        self.showMinimized()
 
 
 class Facturation(QMainWindow):
@@ -129,10 +124,7 @@ class Module_products_un(QMainWindow):
             super().__init__()
             uic.loadUi("UI/modulo_producto_unidad.ui", self)
             self.setFixedSize(QSize(860, 780))
-            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
-            self.setWindowTitle(APP_REQUERIMENTS[1])
-            self.closed.clicked.connect(self.close_assets)
-            self.minimized.clicked.connect(self.minimized_assets)
+            self.setWindowTitle("Inventario")
 
         except Exception as e:
             QMessageBox.critical(
@@ -149,6 +141,6 @@ class Module_products_un(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = registerassets()
+    window = Facturation()
     window.show()
     sys.exit(app.exec())
