@@ -102,7 +102,7 @@ class registerassets(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/registerassets.ui", self)
-            self.setFixedSize(QSize(780, 675))
+            self.setFixedSize(QSize(780, 640))
             self.setWindowTitle("Registrar activo")
             self.cancelbutton.clicked.connect(self.close_assets)
 
@@ -138,6 +138,6 @@ class Module_products_un(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Login()
+    window = registerassets()
     window.show()
     sys.exit(app.exec())
