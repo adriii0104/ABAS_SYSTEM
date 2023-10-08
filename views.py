@@ -42,7 +42,7 @@ class Login(QMainWindow):
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
-            self.close.clicked.connect(self.closed)
+            self.close.clicked.connect(self.close_login)
             self.minimized.clicked.connect(self.minimized_login)
         except Exception as e:
             QMessageBox.critical(
@@ -102,6 +102,7 @@ class assets(QMainWindow):
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.close.clicked.connect(self.close_assets)
+            self.cancel.clicked.connect(self.close_assets)
             self.minimized.clicked.connect(self.minimized_assets)
 
         except Exception as e:

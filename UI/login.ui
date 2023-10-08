@@ -252,7 +252,7 @@ background-color: #BABABA;
        <normaloff>../IMGS/08.png</normaloff>../IMGS/08.png</iconset>
      </property>
     </widget>
-    <widget class="QPushButton" name="minimizar">
+    <widget class="QPushButton" name="minimized">
      <property name="geometry">
       <rect>
        <x>430</x>
