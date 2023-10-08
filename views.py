@@ -89,7 +89,6 @@ class Facturation(QMainWindow):
 
     def open_inventary(self):
         try:
-            self.close()
             self.unitary_products = Module_products_un()
             self.unitary_products.show()
         except Exception as e:
@@ -112,11 +111,8 @@ class registerassets(QMainWindow):
             super().__init__()
             uic.loadUi("UI/registerassets.ui", self)
             self.setFixedSize(QSize(780, 675))
-            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
-            self.closebutton.clicked.connect(self.close_assets)
             self.cancelbutton.clicked.connect(self.close_assets)
-            self.minimizedbutton.clicked.connect(self.minimized_assets)
 
         except Exception as e:
             QMessageBox.critical(
@@ -124,9 +120,6 @@ class registerassets(QMainWindow):
     
     def close_assets(self):
         self.close()
-
-    def minimized_assets(self):
-        self.showMinimized()
 
 
 class Module_products_un(QMainWindow):
@@ -156,6 +149,6 @@ class Module_products_un(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Facturation()
+    window = registerassets()
     window.show()
     sys.exit(app.exec())

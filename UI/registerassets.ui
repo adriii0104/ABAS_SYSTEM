@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>780</width>
-    <height>675</height>
+    <height>643</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,106 +34,11 @@ border: red;
 
 }</string>
    </property>
-   <widget class="QWidget" name="barrasuperior" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>801</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#minimizedbutton, #closebutton {
-
-border: None;
-
-}
-
-QWidget{
-background-color: rgb(224, 224, 224);
-}</string>
-    </property>
-    <widget class="QLabel" name="asstetslabel">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: #000000;</string>
-     </property>
-     <property name="text">
-      <string>Agregar activos fijos</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="closebutton">
-     <property name="geometry">
-      <rect>
-       <x>750</x>
-       <y>0</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">:hover{
-background-color: #BABABA;
-
-}
-</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/08.png</normaloff>../IMGS/08.png</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="minimizedbutton">
-     <property name="geometry">
-      <rect>
-       <x>720</x>
-       <y>0</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">:hover{
-background-color: #BABABA;
-
-}
-
-</string>
-     </property>
-     <property name="inputMethodHints">
-      <set>Qt::ImhNone</set>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/09.png</normaloff>../IMGS/09.png</iconset>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="pantallaprincipal" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>30</y>
+      <y>0</y>
       <width>781</width>
       <height>641</height>
      </rect>
@@ -275,6 +180,9 @@ border-radius: 3px;
        <width>101</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
       <string>Cancelar</string>
@@ -473,6 +381,9 @@ border-radius: 3px;
        <width>101</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
       <string>Aceptar</string>
