@@ -103,7 +103,7 @@ class registerassets(QMainWindow):
             super().__init__()
             uic.loadUi("UI/registerassets.ui", self)
             self.setFixedSize(QSize(780, 675))
-            self.setWindowTitle("Agregar activos")
+            self.setWindowTitle("Registrar activo")
             self.cancelbutton.clicked.connect(self.close_assets)
 
         except Exception as e:
