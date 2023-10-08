@@ -118,9 +118,38 @@ class assets(QMainWindow):
 
 
 
+class Module_products_un(QMainWindow):
+    def __init__(self):
+        try:
+            # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            super().__init__()
+            uic.loadUi("UI/modulo_producto_unidad.ui", self)
+            self.setFixedSize(QSize(860, 675))
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+            self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.closed.clicked.connect(self.close_assets)
+            self.minimized.clicked.connect(self.minimized_assets)
+
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
+    
+    def close_assets(self):
+        self.close()
+
+    def minimized_assets(self):
+        self.showMinimized()
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = assets()
+    window = Module_products_un()
     window.show()
     sys.exit(app.exec())
