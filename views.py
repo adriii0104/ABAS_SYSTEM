@@ -40,9 +40,15 @@ class Login(QMainWindow):
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
+            self.cerrar.clicked.connect(self.closed)
+            self.minimizar.clicked.connect(self.minimizedd)
         except Exception as e:
             QMessageBox.critical(self, "Error", "Error al iniciar la aplicación: " + str(e))
 
+    def closed(self):
+        self.close()
+    def minimizedd(self):
+        self.showMinimized()
 
 class Facturation(QMainWindow):
     def __init__(self):
