@@ -42,16 +42,16 @@ class Login(QMainWindow):
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
-            self.cerrar.clicked.connect(self.closed)
-            self.minimizar.clicked.connect(self.minimizedd)
+            self.close.clicked.connect(self.closed)
+            self.minimized.clicked.connect(self.minimized_login)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
-    def closed(self):
+    def close_login(self):
         self.close()
 
-    def minimizedd(self):
+    def minimized_login(self):
         self.showMinimized()
 
 
@@ -92,8 +92,34 @@ class Facturation(QMainWindow):
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
 
+class assets(QMainWindow):
+    def __init__(self):
+        try:
+            # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            super().__init__()
+            uic.loadUi("UI/assets.ui", self)
+            self.setFixedSize(QSize(780, 675))
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+            self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.close.clicked.connect(self.close_assets)
+            self.minimized.clicked.connect(self.minimized_assets)
+
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
+    
+    def close_assets(self):
+        self.close()
+
+    def minimized_assets(self):
+        self.showMinimized()
+
+
+
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Facturation()
+    window = assets()
     window.show()
     sys.exit(app.exec())

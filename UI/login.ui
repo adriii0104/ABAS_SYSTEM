@@ -226,7 +226,7 @@ color: rgb(0, 0, 0);</string>
       <string>ABA$</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="cerrar">
+    <widget class="QPushButton" name="close">
      <property name="geometry">
       <rect>
        <x>460</x>
