@@ -68,6 +68,9 @@ class Facturation(QMainWindow):
             self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
             self.closes.clicked.connect(self.close_app)
 
+
+            self.inventario.clicked.connect(self.open_inventary)
+
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
@@ -82,6 +85,16 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al cerrar la aplicación: " + str(e))
+            
+
+    def open_inventary(self):
+        try:
+            self.close()
+            self.unitary_products = Module_products_un()
+            self.unitary_products.show()
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def timere(self):
         try:
@@ -116,15 +129,13 @@ class registerassets(QMainWindow):
         self.showMinimized()
 
 
-
-
 class Module_products_un(QMainWindow):
     def __init__(self):
         try:
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/modulo_producto_unidad.ui", self)
-            self.setFixedSize(QSize(860, 675))
+            self.setFixedSize(QSize(860, 780))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.closed.clicked.connect(self.close_assets)
@@ -145,6 +156,6 @@ class Module_products_un(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = registerassets()
+    window = Facturation()
     window.show()
     sys.exit(app.exec())
