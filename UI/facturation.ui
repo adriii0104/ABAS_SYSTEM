@@ -42,6 +42,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QCheckBox{
+	border: none;
     }
 QCheckBox:checked {
         background-color: #efefef;
@@ -85,7 +86,8 @@ QLabel{
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">	background-color: #efefef;
+</string>
      </property>
      <property name="text">
       <string/>
@@ -136,29 +138,6 @@ QLabel{
       </size>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>220</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins</family>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">padding: 15px 17px;
-margin-left: 8px;</string>
-     </property>
-     <property name="text">
-      <string>Facturar</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
@@ -205,32 +184,6 @@ font-size: 14px;</string>
       <string>04:20 PM</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="closes">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>680</y>
-       <width>75</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/10.png</normaloff>../IMGS/10.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>29</width>
-       <height>32</height>
-      </size>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
@@ -265,7 +218,7 @@ font-size: 14px;</string>
       <string notr="true">background-color: white;</string>
      </property>
      <property name="readOnly">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -325,7 +278,7 @@ font-size: 14px;</string>
       <string notr="true">background-color: white;</string>
      </property>
      <property name="readOnly">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -357,6 +310,9 @@ font-size: 14px;</string>
        <width>171</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <item>
       <property name="text">
@@ -424,6 +380,9 @@ font-size: 14px;</string>
        <width>171</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <item>
       <property name="text">
@@ -503,8 +462,11 @@ font-size: 14px;</string>
         <x>210</x>
         <y>110</y>
         <width>51</width>
-        <height>20</height>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
        <string notr="true">border: none;</string>
@@ -514,7 +476,7 @@ font-size: 14px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../IMGS/13.png</normaloff>../IMGS/13.png</iconset>
+        <normaloff>../IMGS/18.png</normaloff>../IMGS/18.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -541,7 +503,7 @@ font-size: 14px;</string>
        <string notr="true">background-color: white;</string>
       </property>
       <property name="readOnly">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_17">
@@ -970,6 +932,9 @@ border-right: 1px solid black;</string>
        <family>Poppins</family>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
       <string>IMPRIMIR</string>
      </property>
@@ -991,6 +956,9 @@ border-right: 1px solid black;</string>
       <font>
        <family>Poppins</family>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
       <string>LIMPIAR</string>
@@ -1014,6 +982,9 @@ border-right: 1px solid black;</string>
        <family>Poppins</family>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
       <string>CANCELAR</string>
      </property>
@@ -1035,6 +1006,9 @@ border-right: 1px solid black;</string>
       <font>
        <family>Poppins</family>
       </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="text">
       <string>SALVAR</string>
@@ -1096,10 +1070,10 @@ border-right: 1px solid black;</string>
       <string>ABAS SYSTEM</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="close2">
+    <widget class="QPushButton" name="closes">
      <property name="geometry">
       <rect>
-       <x>1320</x>
+       <x>1340</x>
        <y>3</y>
        <width>75</width>
        <height>31</height>
@@ -1125,7 +1099,7 @@ border-right: 1px solid black;</string>
     <widget class="QPushButton" name="minimize">
      <property name="geometry">
       <rect>
-       <x>1270</x>
+       <x>1290</x>
        <y>10</y>
        <width>75</width>
        <height>21</height>

@@ -68,7 +68,7 @@ class Facturation(QMainWindow):
 
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
-            self.timee.start(1000)  # 1000 ms = 1 segundo
+            self.timee.start(1000)
 
         except Exception as e:
             QMessageBox.critical(
