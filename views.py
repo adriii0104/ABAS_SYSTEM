@@ -68,6 +68,9 @@ class Facturation(QMainWindow):
             self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
             self.closes.clicked.connect(self.close_app)
 
+
+            self.inventario.clicked.connect(self.open_inventary)
+
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
@@ -82,6 +85,16 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al cerrar la aplicación: " + str(e))
+            
+
+    def open_inventary(self):
+        try:
+            self.close()
+            self.unitary_products = Module_products_un()
+            self.unitary_products.show()
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def timere(self):
         try:
@@ -138,8 +151,11 @@ class Module_products_un(QMainWindow):
     def minimized_assets(self):
         self.showMinimized()
 
+
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = registerassets()
+    window = Facturation()
     window.show()
     sys.exit(app.exec())
