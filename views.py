@@ -61,11 +61,10 @@ class Facturation(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
-            self.setFixedSize(QSize(1980, 940))
+            self.setFixedSize(QSize(1400, 840))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.closes.clicked.connect(self.close_app)
-            self.showMaximized()
 
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)

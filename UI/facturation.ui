@@ -35,7 +35,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-10</y>
+      <y>30</y>
       <width>111</width>
       <height>801</height>
      </rect>
@@ -209,7 +209,7 @@ font-size: 14px;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>690</y>
+       <y>680</y>
        <width>75</width>
        <height>61</height>
       </rect>
@@ -236,7 +236,7 @@ font-size: 14px;</string>
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>0</y>
+      <y>40</y>
       <width>1301</width>
       <height>161</height>
      </rect>
@@ -364,125 +364,6 @@ font-size: 14px;</string>
       </property>
      </item>
     </widget>
-    <widget class="QWidget" name="widget_3" native="true">
-     <property name="geometry">
-      <rect>
-       <x>940</x>
-       <y>0</y>
-       <width>361</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-left: 1px solid black;</string>
-     </property>
-     <widget class="QLineEdit" name="lineEdit_3">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>110</y>
-        <width>161</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_9">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>80</y>
-        <width>151</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">margin-left: 3px;</string>
-      </property>
-      <property name="text">
-       <string>NOMBRE PRODUCTO</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_17">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>10</y>
-        <width>161</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">margin-left: 8px;</string>
-      </property>
-      <property name="text">
-       <string>GRUPO JACKELIN SRL</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>120</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">margin-left: 6px;</string>
-      </property>
-      <property name="text">
-       <string>Buscar</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>90</y>
-        <width>51</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: none;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../IMGS/13.png</normaloff>../IMGS/13.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>20</width>
-        <height>20</height>
-       </size>
-      </property>
-     </widget>
-    </widget>
     <widget class="QSpinBox" name="spinBox">
      <property name="geometry">
       <rect>
@@ -565,12 +446,133 @@ font-size: 14px;</string>
       </property>
      </item>
     </widget>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>0</y>
+       <width>361</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#widget_3{
+		border-left: 1px solid black;
+}</string>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>243</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">margin-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string>NOMBRE PRODUCTO</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>120</y>
+        <width>61</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">margin-left: 6px;</string>
+      </property>
+      <property name="text">
+       <string>Buscar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>110</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../IMGS/13.png</normaloff>../IMGS/13.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>243</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">margin-left: 3px;</string>
+      </property>
+      <property name="text">
+       <string>GRUPO JACKELINE SRL</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>540</y>
+      <y>570</y>
       <width>391</width>
       <height>251</height>
      </rect>
@@ -743,7 +745,7 @@ font-size: 14px;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>160</y>
+      <y>200</y>
       <width>1281</width>
       <height>411</height>
      </rect>
@@ -877,7 +879,7 @@ font-size: 14px;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>570</y>
+      <y>610</y>
       <width>921</width>
       <height>221</height>
      </rect>
@@ -1069,11 +1071,90 @@ border-right: 1px solid black;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="widget_6" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: white;</string>
+    </property>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ABAS SYSTEM</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="close2">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>3</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMGS/08.png</normaloff>../IMGS/08.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="minimize">
+     <property name="geometry">
+      <rect>
+       <x>1270</x>
+       <y>10</y>
+       <width>75</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMGS/09.png</normaloff>../IMGS/09.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
    <zorder>widget_2</zorder>
    <zorder>widget</zorder>
    <zorder>widget_4</zorder>
    <zorder>tableWidget_2</zorder>
    <zorder>widget_5</zorder>
+   <zorder>widget_6</zorder>
   </widget>
  </widget>
  <resources/>
