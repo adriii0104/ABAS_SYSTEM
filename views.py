@@ -64,6 +64,8 @@ class Facturation(QMainWindow):
             self.setFixedSize(QSize(1400, 840))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
+
+            self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
             self.closes.clicked.connect(self.close_app)
 
             self.timee = QTimer(self)
