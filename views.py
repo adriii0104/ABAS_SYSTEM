@@ -39,11 +39,8 @@ class Login(QMainWindow):
             super().__init__()
             uic.loadUi("UI/login.ui", self)
             self.setFixedSize(QSize(480, 440))
-            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
-            self.close.clicked.connect(self.close_login)
-            self.minimized.clicked.connect(self.minimized_login)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
@@ -106,7 +103,7 @@ class registerassets(QMainWindow):
             super().__init__()
             uic.loadUi("UI/registerassets.ui", self)
             self.setFixedSize(QSize(780, 675))
-            self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.setWindowTitle("Agregar activos")
             self.cancelbutton.clicked.connect(self.close_assets)
 
         except Exception as e:
