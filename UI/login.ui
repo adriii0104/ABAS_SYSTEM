@@ -30,10 +30,16 @@
     <normaloff>../IMGS/a81q5-rmlr3-001.ico</normaloff>../IMGS/a81q5-rmlr3-001.ico</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #01102E;
+   <string notr="true">background-color: #ffffff;
 border-radius: 5px;</string>
   </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhPreferLowercase</set>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QLabel" name="Iniciarsesion">
     <property name="geometry">
      <rect>
@@ -45,7 +51,7 @@ border-radius: 5px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 23pt &quot;Bahnschrift Light&quot;;
-color: rgb(255, 255, 255);</string>
+color: #000000;</string>
     </property>
     <property name="text">
      <string>Iniciar sesion</string>
@@ -62,7 +68,7 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 15pt &quot;Bahnschrift Light&quot;;
-color: rgb(255, 255, 255);</string>
+color: #000000;</string>
     </property>
     <property name="text">
      <string>Usuario</string>
@@ -96,7 +102,7 @@ font: 9pt &quot;Bahnschrift Light&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 15pt &quot;Bahnschrift Light&quot;;
-color: rgb(255, 255, 255);</string>
+color: #000000;</string>
     </property>
     <property name="text">
      <string>Contraseña</string>
@@ -106,50 +112,123 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>220</y>
+      <y>210</y>
       <width>251</width>
-      <height>31</height>
+      <height>34</height>
      </rect>
     </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>34</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+     <string notr="true">background-color: #E0E0E0;
+border-radius: 5px;
+left: 5px;
+height: 20px;
+color: black;
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhDialableCharactersOnly|Qt::ImhDigitsOnly|Qt::ImhEmailCharactersOnly|Qt::ImhFormattedNumbersOnly|Qt::ImhLatinOnly|Qt::ImhLowercaseOnly|Qt::ImhUppercaseOnly|Qt::ImhUrlCharactersOnly</set>
+    </property>
+    <property name="text">
+     <string>alexis</string>
+    </property>
+    <property name="cursorPosition">
+     <number>6</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="Inputcontrasena">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>330</y>
+      <y>320</y>
       <width>251</width>
-      <height>31</height>
+      <height>34</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+     <string notr="true">background-color: #E0E0E0;
+border-radius: 5px;
+</string>
+    </property>
+    <property name="locale">
+     <locale language="Spanish" country="UnitedStates"/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhPreferLowercase|Qt::ImhSensitiveData</set>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-10</x>
       <y>0</y>
-      <width>481</width>
+      <width>491</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #01102E;</string>
+     <string notr="true">background-color: #E0E0E0;</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>3</y>
+       <x>50</x>
+       <y>0</y>
        <width>41</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10.5pt &quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ABAS</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cerrar">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
      <property name="text">
       <string/>
@@ -158,21 +237,21 @@ border-radius: 5px;</string>
       <iconset>
        <normaloff>../IMGS/08.png</normaloff>../IMGS/08.png</iconset>
      </property>
-     <property name="iconSize">
-      <size>
-       <width>10</width>
-       <height>10</height>
-      </size>
-     </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="minimizar">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>3</y>
+       <x>430</x>
+       <y>0</y>
        <width>31</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
      </property>
      <property name="text">
       <string/>
@@ -181,28 +260,28 @@ border-radius: 5px;</string>
       <iconset>
        <normaloff>../IMGS/09.png</normaloff>../IMGS/09.png</iconset>
      </property>
-     <property name="iconSize">
-      <size>
-       <width>18</width>
-       <height>18</height>
-      </size>
-     </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QPushButton" name="logo">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>0</y>
-       <width>81</width>
-       <height>41</height>
+       <width>21</width>
+       <height>31</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Bahnschrift Light&quot;;
-color: rgb(255, 255, 255);</string>
-     </property>
      <property name="text">
-      <string>ABAS System</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../IMGS/11.png</normaloff>../IMGS/11.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
      </property>
     </widget>
    </widget>

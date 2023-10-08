@@ -70,6 +70,6 @@ class Facturation(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Facturation()
+    window = Login()
     window.show()
     sys.exit(app.exec())
