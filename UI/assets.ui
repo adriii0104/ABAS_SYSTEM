@@ -149,6 +149,36 @@ QLineEdit {
 background-color: #E0E0E0;
 color: black;
 border: red;
+border-radius: 5px;
+
+}
+
+QComboBox {
+color: rgb(0, 0, 0);
+background-color: rgb(224, 224, 224);
+
+
+}
+
+
+
+QLabel {
+color: black;
+
+
+}
+
+QDateEdit {
+background-color: #E0E0E0;
+color:  rgb(0, 0, 0);
+
+}
+
+#cancel, #accept {
+background-color: #E0E0E0;
+color: rgb(0, 0, 0);
+
+
 
 }</string>
     </property>
@@ -222,7 +252,7 @@ border: red;
       <string notr="true">padding-left: 10px;</string>
      </property>
     </widget>
-    <widget class="QDateEdit" name="dateEdit">
+    <widget class="QDateEdit" name="datead">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -432,7 +462,7 @@ border-color: rgb(170, 0, 0);</string>
       <string>Nombre del activo *</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="accept">
      <property name="geometry">
       <rect>
        <x>630</x>
@@ -498,7 +528,7 @@ border-color: rgb(170, 0, 0);</string>
       </property>
      </item>
     </widget>
-    <widget class="QDateEdit" name="dateEdit_2">
+    <widget class="QDateEdit" name="datein">
      <property name="geometry">
       <rect>
        <x>270</x>
