@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Agregar activos fijos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../IMGS/11.png</normaloff>../IMGS/11.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -30,7 +34,7 @@ border: red;
 
 }</string>
    </property>
-   <widget class="QWidget" name="widget_2" native="true">
+   <widget class="QWidget" name="barrasuperior" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -40,11 +44,17 @@ border: red;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #E0E0E0;
+     <string notr="true">#minimizedbutton, #closebutton {
 
-</string>
+border: None;
+
+}
+
+QWidget{
+background-color: rgb(224, 224, 224);
+}</string>
     </property>
-    <widget class="QLabel" name="label_12">
+    <widget class="QLabel" name="asstetslabel">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -60,7 +70,7 @@ border: red;
       <string>Agregar activos fijos</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="close">
+    <widget class="QPushButton" name="closebutton">
      <property name="geometry">
       <rect>
        <x>750</x>
@@ -77,13 +87,7 @@ border: red;
 background-color: #BABABA;
 
 }
-
-#close{
-
-border: None;
-
-
-}</string>
+</string>
      </property>
      <property name="text">
       <string/>
@@ -93,7 +97,7 @@ border: None;
        <normaloff>../IMGS/08.png</normaloff>../IMGS/08.png</iconset>
      </property>
     </widget>
-    <widget class="QPushButton" name="minimized">
+    <widget class="QPushButton" name="minimizedbutton">
      <property name="geometry">
       <rect>
        <x>720</x>
@@ -111,12 +115,7 @@ background-color: #BABABA;
 
 }
 
-#minimized{
-
-border: None;
-
-
-}</string>
+</string>
      </property>
      <property name="inputMethodHints">
       <set>Qt::ImhNone</set>
@@ -130,7 +129,7 @@ border: None;
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="pantallaprincipal" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -146,16 +145,16 @@ font: 25 12pt &quot;Bahnschrift Light&quot;;
 }
 
 QLineEdit {
-background-color: #E0E0E0;
+background-color: rgb(240, 240, 240);
 color: black;
-border: red;
-border-radius: 5px;
+border-radius: 3px;
 
 }
 
 QComboBox {
 color: rgb(0, 0, 0);
 background-color: rgb(224, 224, 224);
+border: 1px solid black;
 
 
 }
@@ -174,13 +173,12 @@ color:  rgb(0, 0, 0);
 
 }
 
-#cancel, #accept {
+#cancelbutton, #acceptbutton {
 background-color: #E0E0E0;
 color: rgb(0, 0, 0);
-
-
-
-}</string>
+border-radius: 3px;
+}
+</string>
     </property>
     <widget class="QLineEdit" name="codigoinput">
      <property name="geometry">
@@ -200,7 +198,7 @@ color: rgb(0, 0, 0);
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="seriallabel">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -213,7 +211,7 @@ color: rgb(0, 0, 0);
       <string>Serial</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_8">
+    <widget class="QLabel" name="typelabel">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -226,20 +224,7 @@ color: rgb(0, 0, 0);
       <string>Tipo de activo </string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>550</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Fecha de incorporacion</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="serialinput">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -269,7 +254,7 @@ color: rgb(0, 0, 0);
       </date>
      </property>
     </widget>
-    <widget class="QPushButton" name="cancel">
+    <widget class="QPushButton" name="cancelbutton">
      <property name="geometry">
       <rect>
        <x>500</x>
@@ -282,7 +267,7 @@ color: rgb(0, 0, 0);
       <string>Cancelar</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="codelabel">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -298,7 +283,7 @@ color: rgb(0, 0, 0);
       <string>Codigo del activo *</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_10">
+    <widget class="QLabel" name="datebuylabel">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -311,7 +296,7 @@ color: rgb(0, 0, 0);
       <string>Fecha de adquisicion</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="brandinput">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -324,7 +309,7 @@ color: rgb(0, 0, 0);
       <string notr="true">padding-left: 10px;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QLabel" name="grouplabel">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -337,7 +322,7 @@ color: rgb(0, 0, 0);
       <string>Grupo del activo *</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_4">
+    <widget class="QLineEdit" name="modelinput">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -350,7 +335,7 @@ color: rgb(0, 0, 0);
       <string notr="true">padding-left: 10px;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_9">
+    <widget class="QLabel" name="pricelabel">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -363,7 +348,7 @@ color: rgb(0, 0, 0);
       <string>Valor de adquisicion *</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="brandlabel">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -376,7 +361,7 @@ color: rgb(0, 0, 0);
       <string>Marca</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="groupselect">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -422,7 +407,7 @@ color: rgb(0, 0, 0);
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="nameinput">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -432,11 +417,10 @@ color: rgb(0, 0, 0);
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">padding-left: 10px;
-border-color: rgb(170, 0, 0);</string>
+      <string notr="true">padding-left: 10px;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="modellabel">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -449,7 +433,7 @@ border-color: rgb(170, 0, 0);</string>
       <string>Modelo</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="namelabel">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -462,7 +446,7 @@ border-color: rgb(170, 0, 0);</string>
       <string>Nombre del activo *</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="accept">
+    <widget class="QPushButton" name="acceptbutton">
      <property name="geometry">
       <rect>
        <x>630</x>
@@ -475,7 +459,7 @@ border-color: rgb(170, 0, 0);</string>
       <string>Aceptar</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_3">
+    <widget class="QComboBox" name="typeselect">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -528,24 +512,7 @@ border-color: rgb(170, 0, 0);</string>
       </property>
      </item>
     </widget>
-    <widget class="QDateEdit" name="datein">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>550</y>
-       <width>110</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="date">
-      <date>
-       <year>2023</year>
-       <month>1</month>
-       <day>1</day>
-      </date>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_2">
+    <widget class="QComboBox" name="locationselect">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -578,7 +545,7 @@ border-color: rgb(170, 0, 0);</string>
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_8">
+    <widget class="QLineEdit" name="priceinput">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -592,7 +559,7 @@ border-color: rgb(170, 0, 0);</string>
 </string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="branchlabel">
      <property name="geometry">
       <rect>
        <x>160</x>
