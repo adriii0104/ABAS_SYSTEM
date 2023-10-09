@@ -109,7 +109,8 @@ class registerassets(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-    
+
+
     def close_assets(self):
         self.close()
 
@@ -138,6 +139,6 @@ class Module_products_un(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = registerassets()
+    window = Login()
     window.show()
     sys.exit(app.exec())
