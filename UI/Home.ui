@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1111</width>
-    <height>721</height>
+    <height>709</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -112,53 +112,53 @@ border-radius: 5px;
       <string>Facturacion</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label1">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>10</y>
-       <width>101</width>
-       <height>61</height>
+       <y>0</y>
+       <width>111</width>
+       <height>91</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 30pt &quot;Baskerville Old Face&quot;;
+      <string notr="true">font: 32pt &quot;Baskerville Old Face&quot;;
 color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>ABA$ </string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>81</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../IMGS/01.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>80</y>
+       <y>90</y>
        <width>231</width>
        <height>16</height>
       </rect>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../IMGS/27.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
