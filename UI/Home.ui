@@ -6,129 +6,160 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>682</width>
-    <height>708</height>
+    <width>1111</width>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(224, 224, 224);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{ 
+font: 25 10pt &quot;Bahnschrift Light&quot;;
+}</string>
+   </property>
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>0</x>
       <y>0</y>
-      <width>701</width>
-      <height>711</height>
+      <width>231</width>
+      <height>861</height>
      </rect>
     </property>
-    <property name="baseSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift Light</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
     <property name="styleSheet">
-     <string notr="true">QTabWidget{
+     <string notr="true">QWidget{
+background: rgb(41, 43, 47);
+} 
 
-background: rgb(255, 255, 255);
-
-}
-
-QTabWidget::pane { /* The tab widget frame */
-    border-top: 1px solid #C2C7CB;
-}
-
-QTabBar::tab {
-background: rgb(220,220,220);
-height: 40px;
-width: 40px;
-
-
-}
-
-QTabBar::tab:selected, QTabBar::tab:hover {
-background: rgb(190,190,190);
-}
-
-QPushButton{
-font: 25 12pt &quot;Bahnschrift Light&quot;;
-
-
+QPushButton {
+color: rgb(0, 0, 0);
+background-color: rgb(224, 224, 224);
+border: 1px solid gray;
+border-radius: 5px;
 
 }</string>
     </property>
-    <property name="tabPosition">
-     <enum>QTabWidget::West</enum>
-    </property>
-    <property name="tabShape">
-     <enum>QTabWidget::Rounded</enum>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <property name="elideMode">
-     <enum>Qt::ElideNone</enum>
-    </property>
-    <property name="documentMode">
-     <bool>false</bool>
-    </property>
-    <property name="movable">
-     <bool>false</bool>
-    </property>
-    <property name="tabBarAutoHide">
-     <bool>false</bool>
-    </property>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string/>
-     </attribute>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>590</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Proveedores</string>
+     </property>
     </widget>
-    <widget class="QWidget" name="tab">
-     <attribute name="icon">
-      <iconset>
-       <normalon>../IMGS/03.png</normalon>
-      </iconset>
-     </attribute>
-     <attribute name="title">
-      <string/>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_5">
-     <attribute name="title">
-      <string>Clientes</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Empleados</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_6">
-     <attribute name="title">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>370</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
       <string>Inventario</string>
-     </attribute>
+     </property>
     </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Contabilidad</string>
-     </attribute>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>480</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clientes</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Inicio</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>260</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Facturacion</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>101</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 30pt &quot;Baskerville Old Face&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>ABA$ </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../IMGS/01.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
     </widget>
    </widget>
   </widget>
