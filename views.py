@@ -41,10 +41,21 @@ class Login(QMainWindow):
             self.setFixedSize(QSize(480, 440))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
+            self.Togglepassword.clicked.connect(self.toggle_echo_mode)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+            
 
+
+
+    def toggle_echo_mode(self):
+        current_echo_mode = self.password.echoMode()
+
+        if current_echo_mode == QLineEdit.EchoMode.Password:
+            self.password.setEchoMode(QLineEdit.EchoMode.Normal)
+        else:
+            self.password.setEchoMode(QLineEdit.EchoMode.Password)
 
 
 class Facturation(QMainWindow):

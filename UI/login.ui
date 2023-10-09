@@ -133,7 +133,7 @@ background: #f4f4f4;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="Inputcontrasena">
+    <widget class="QLineEdit" name="password">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -275,7 +275,7 @@ background: #BABABA;
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_9">
+    <widget class="QPushButton" name="Togglepassword">
      <property name="geometry">
       <rect>
        <x>330</x>
