@@ -1,5 +1,5 @@
 # ABAS SYSTEM
-
+Sistema de facturación automático.
 ## Sobre ABAS
 
 Abas será un sistema especializado en la facturación de pequeñas empresas.
