@@ -5,7 +5,7 @@ try:
     from PyQt6 import uic, QtCore, QtGui
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
     import sys
-    from SRC.settings import APP_REQUERIMENTS
+    from SRC.settings import *
     from datetime import datetime
     from app import Add_data_Table
 except Exception as e:
@@ -101,15 +101,13 @@ class Facturation(QMainWindow):
 
             self.information_1.clicked.connect(self.open_information)
 
-            data_table = Add_data_Table()
-
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
 
     def open_information(self):
-        QMessageBox.information(self, "Información", information1)
+        QMessageBox.information(self, "Información", APP_INFORMATIONS["info1"])
 
 
     def close_app(self):

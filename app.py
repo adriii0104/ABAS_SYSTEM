@@ -1,4 +1,4 @@
-from views import Login, Facturation
+from views import *
 from PyQt6.QtWidgets import QApplication
 import sys
 

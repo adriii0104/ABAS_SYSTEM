@@ -22,10 +22,16 @@ Tendrás todos las dependencias instaladas en el entorno virtual ```ABAS```.
 
 Lo siguiente es ir al archivo app.py y ejecutar el código teniendo el entorno virtual encendido utilizando ```python app.py```
 
-y finalmente tendrás el archivo ejecutandose. Las credenciales de inicio de sesión de pruebas son
+Tendrás el archivo ejecutandose. Las credenciales de inicio de sesión de pruebas son
 
 usuario: admin
 contraseña: 1234
+
+
+
+# Finalmente el archivo debería cargarte correctamente y deberías ver algo así:
+
+![Foto del sistema.](/IMGS/33.png)
 
 
 ### Esperamos te haya gustado.
