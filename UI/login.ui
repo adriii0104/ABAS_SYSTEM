@@ -91,7 +91,7 @@ background: #f4f4f4;
       <string>Iniciar sesión</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="Inputusuario">
+    <widget class="QLineEdit" name="inputuser">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -133,7 +133,7 @@ background: #f4f4f4;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="password">
+    <widget class="QLineEdit" name="passwordinput">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -217,7 +217,7 @@ background: #f4f4f4;
       <string>Usuario</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_8">
+    <widget class="QPushButton" name="Loginbutton">
      <property name="geometry">
       <rect>
        <x>80</x>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>890</width>
-    <height>795</height>
+    <height>782</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1341,7 +1341,7 @@ color: black;
         </font>
        </property>
        <property name="text">
-        <string>Siempre aplicar IVA</string>
+        <string>Siempre aplicar IVA.</string>
        </property>
       </widget>
       <widget class="QCheckBox" name="checkBox_6">
@@ -1360,7 +1360,7 @@ color: black;
         </font>
        </property>
        <property name="text">
-        <string>Siempre advertir caducidad</string>
+        <string>Siempre advertir caducidad.</string>
        </property>
       </widget>
      </widget>
@@ -1376,63 +1376,6 @@ color: black;
       <property name="styleSheet">
        <string notr="true">background: #f4f4f4;</string>
       </property>
-      <widget class="QCheckBox" name="checkBox_16">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>80</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Código EAN obligatório.</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_17">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>140</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Siempre aplicar IVA</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_18">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>200</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Siempre advertir caducidad</string>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="lineEdit_19">
        <property name="geometry">
         <rect>
@@ -1461,24 +1404,11 @@ color: black;
         <string>3 Digitos EAN</string>
        </property>
       </widget>
-     </widget>
-     <widget class="QWidget" name="widget_5" native="true">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>410</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: #f4f4f4;</string>
-      </property>
-      <widget class="QCheckBox" name="checkBox_23">
+      <widget class="QCheckBox" name="checkBox_7">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>20</y>
+         <x>50</x>
+         <y>120</y>
          <width>261</width>
          <height>17</height>
         </rect>
@@ -1490,51 +1420,13 @@ color: black;
         </font>
        </property>
        <property name="text">
-        <string>Activar en inventario automático.</string>
+        <string>Agregar fecha de compra.</string>
        </property>
       </widget>
-      <widget class="QCheckBox" name="checkBox_24">
+      <widget class="QCheckBox" name="checkBox_8">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>80</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Código EAN obligatório.</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_25">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>140</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Siempre aplicar IVA</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_26">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
+         <x>50</x>
          <y>200</y>
          <width>261</width>
          <height>17</height>
@@ -1547,117 +1439,9 @@ color: black;
         </font>
        </property>
        <property name="text">
-        <string>Siempre advertir caducidad</string>
+        <string>Ordenar EAN por orden de fecha.</string>
        </property>
       </widget>
-     </widget>
-     <widget class="QWidget" name="widget_6" native="true">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>410</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: #f4f4f4;</string>
-      </property>
-      <widget class="QCheckBox" name="checkBox_31">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>20</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Activar en inventario automático.</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_32">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>80</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Código EAN obligatório.</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_33">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>140</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Siempre aplicar IVA</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_34">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>200</y>
-         <width>261</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift Light</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Siempre advertir caducidad</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>640</x>
-        <y>390</y>
-        <width>91</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiBold</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Automátizar</string>
-      </property>
      </widget>
      <widget class="QLabel" name="label_37">
       <property name="geometry">
@@ -1676,25 +1460,6 @@ color: black;
       </property>
       <property name="text">
        <string>Orden</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_38">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>390</y>
-        <width>91</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiBold</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Automátizar</string>
       </property>
      </widget>
     </widget>

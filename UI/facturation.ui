@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1490</width>
-    <height>800</height>
+    <height>798</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -102,68 +102,11 @@ QLabel{
       </size>
      </property>
     </widget>
-    <widget class="QCheckBox" name="inventario">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>440</y>
-       <width>191</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins</family>
-       <pointsize>9</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/20.png</normaloff>../IMGS/20.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>36</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>490</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>-1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">padding: 15px 17px;
-margin-left: 4px;</string>
-     </property>
-     <property name="text">
-      <string>Inventario</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="timering">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
+       <y>50</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -178,7 +121,29 @@ margin-left: 4px;</string>
 font-size: 14px;</string>
      </property>
      <property name="text">
-      <string>04:20 PM</string>
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="date">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">margin-left:1px;
+font-size: 14px;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -434,7 +399,7 @@ font-size: 14px;</string>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>90</y>
         <width>243</width>
         <height>28</height>
@@ -447,10 +412,10 @@ font-size: 14px;</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">margin-left: 3px;</string>
+       <string notr="true">margin-left: 5px;</string>
       </property>
       <property name="text">
-       <string>NOMBRE PRODUCTO</string>
+       <string>NOMBRE O ID PRODUCTO</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_6">
@@ -509,9 +474,9 @@ margin-left: 7px;</string>
      <widget class="QLineEdit" name="lineEdit_3">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>120</y>
-        <width>151</width>
+        <width>161</width>
         <height>31</height>
        </rect>
       </property>
@@ -549,6 +514,29 @@ margin-left: 7px;</string>
       </property>
       <property name="text">
        <string>GRUPO JACKELINE SRL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="information_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>80</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
       </property>
      </widget>
     </widget>

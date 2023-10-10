@@ -1,14 +1,15 @@
 try:
-    from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox, QCheckBox, QListView, QListWidgetItem, QPushButton, QApplication, QDialog, QLabel, QLineEdit, QVBoxLayout, QPushButton, QWidget, QFormLayout
+    from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox, QCheckBox, QListView, QListWidgetItem, \
+        QPushButton, QApplication, QDialog, QLabel, QLineEdit, QVBoxLayout, QPushButton, QWidget, QFormLayout, QTableWidgetItem
     from PyQt6.QtGui import QIcon, QPainter, QFont, QMovie
     from PyQt6 import uic, QtCore, QtGui
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
     import sys
     from SRC.settings import APP_REQUERIMENTS
     from datetime import datetime
+    from app import Add_data_Table
 except Exception as e:
-    QMessageBox.critical("Error", "Error al iniciar la aplicación: " + str(e))
-
+    print(e)
 
 class Main(QMainWindow):
     def __init__(self):
@@ -34,6 +35,7 @@ class Main(QMainWindow):
 
 class Login(QMainWindow):
     def __init__(self):
+        self.open_window = None
         try:
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
@@ -42,12 +44,31 @@ class Login(QMainWindow):
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
             self.Togglepassword.clicked.connect(self.toggle_echo_mode)
+            self.Loginbutton.clicked.connect(self.login)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-            
 
+    def login(self):
+        try:
+            user = self.inputuser.text()
+            password = self.passwordinput.text()
 
+            if user == "admin":
+                if password == "1234":
+                    self.close()
+                    if self.open_window is None:
+                        self.open_window = Facturation()
+                    self.open_window.show()
+                else:
+                    QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
+            else:
+                QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
+
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
+        
 
     def toggle_echo_mode(self):
         current_echo_mode = self.password.echoMode()
@@ -61,26 +82,35 @@ class Login(QMainWindow):
 class Facturation(QMainWindow):
     def __init__(self):
         try:
-            # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
             self.setFixedSize(QSize(1400, 840))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
 
-            self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
+            self.times = datetime.now().strftime("%H:%M:%S")
+            self.timering.setText(self.times)
+
+            self.date.setText(datetime.now().strftime("%d/%m/%Y"))
             self.closes.clicked.connect(self.close_app)
-
-
-            self.inventario.clicked.connect(self.open_inventary)
 
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
 
+            self.information_1.clicked.connect(self.open_information)
+
+            data_table = Add_data_Table()
+
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+
+    def open_information(self):
+        QMessageBox.information(self, "Información", information1)
+
 
     def close_app(self):
         try:
@@ -88,15 +118,6 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al cerrar la aplicación: " + str(e))
-            
-
-    def open_inventary(self):
-        try:
-            self.unitary_products = Module_products_un()
-            self.unitary_products.show()
-        except Exception as e:
-            QMessageBox.critical(
-                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def timere(self):
         try:
@@ -121,7 +142,6 @@ class registerassets(QMainWindow):
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
-
     def close_assets(self):
         self.close()
 
@@ -138,18 +158,10 @@ class Module_products_un(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-    
+
     def close_assets(self):
         self.close()
 
     def minimized_assets(self):
         self.showMinimized()
 
-
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = Login()
-    window.show()
-    sys.exit(app.exec())

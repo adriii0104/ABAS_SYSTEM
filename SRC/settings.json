@@ -1,0 +1,14 @@
+{
+    "app_settings": {
+        "name": "ABAS System",
+        "version": "V0.0.1",
+        "language": "en",
+        "license": "Genuines Group",
+        "authorization": true
+    },
+    "notifications": {
+        "active": "True",
+        "Message": "Hay una actualización disponible, por favor actualiza la app lo más rápido posible.",
+        "permissions": "True"
+    }
+}s
