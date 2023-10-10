@@ -1,6 +1,7 @@
 try:
     from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox, QCheckBox, QListView, QListWidgetItem, \
-        QPushButton, QApplication, QDialog, QLabel, QLineEdit, QVBoxLayout, QPushButton, QWidget, QFormLayout, QTableWidgetItem
+        QPushButton, QApplication, QDialog, QLabel, QLineEdit, QVBoxLayout, QPushButton, QWidget, QFormLayout, \
+        QTableWidgetItem
     from PyQt6.QtGui import QIcon, QPainter, QFont, QMovie
     from PyQt6 import uic, QtCore, QtGui
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
@@ -13,6 +14,7 @@ except Exception as e:
 
 class Main(QMainWindow):
     def __init__(self):
+        self.facturate = None
         self.login = None
         try:
             super().__init__()
@@ -28,16 +30,15 @@ class Main(QMainWindow):
         try:
             check = check_log()
             if not check:
-               self.close()
-               self.login = Login()
-               self.login.show()
+                self.close()
+                self.login = Login()
+                self.login.show()
             else:
                 self.close()
                 self.facturate = Facturation()
                 self.facturate.show()
         except Exception as e:
-            QMessageBox.critical(
-                self, "Error", "Error al iniciar la aplicación: " + str(e))
+            print(e)
 
 
 class Login(QMainWindow):
@@ -62,7 +63,7 @@ class Login(QMainWindow):
             password = self.passwordinput.text()
             if user == "admin":
                 if password == "1234":
-                    proccess_log(enterprise_name ="Grupo ramos SRL", logued=True, id=1, facturation=1, user="user", password="password")
+                    proccess_log(enterprise_name="Grupo ramos SRL", logued=True, id=1, facturation=1)
                     self.close()
                     if self.open_window is None:
                         self.open_window = Facturation()
@@ -75,7 +76,6 @@ class Login(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-        
 
     def toggle_echo_mode(self):
         current_echo_mode = self.password.echoMode()
@@ -170,4 +170,3 @@ class Module_products_un(QMainWindow):
 
     def minimized_assets(self):
         self.showMinimized()
-
