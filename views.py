@@ -170,3 +170,28 @@ class Module_products_un(QMainWindow):
 
     def minimized_assets(self):
         self.showMinimized()
+
+
+# class Home(QMainWindow):
+#     def __init__(self):
+#         try:
+#             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+#             super().__init__()
+#             uic.loadUi("UI/home.ui", self)
+#             self.setFixedSize(QSize(780, 640))
+#             self.setWindowTitle("Inicio")
+#             self.facturation.clicked.connect(self.open_facturation)
+
+#         except Exception as e:
+#             QMessageBox.critical(
+#                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+#     def close_assets(self):
+#         self.close()
+
+#     def open_facturation(self):
+#         self.facturation_window = Facturation()
+#         self.facturation_window.show()
+        
+     
+
