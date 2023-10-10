@@ -9,7 +9,6 @@ try:
 except Exception as e:
     QMessageBox.critical("Error", "Error al iniciar la aplicación: " + str(e))
 
-
 class Main(QMainWindow):
     def __init__(self):
         try:
