@@ -1,3 +1,4 @@
 {
-    "info1": "Puedes acceder al producto mediante su Nombre o mediante su ID iniciando con el simbolo # por ejemplo (#123222)"
+    "info1": "Puedes acceder al producto mediante su Nombre o mediante su ID iniciando con el simbolo # por ejemplo (#123222)",
+    "info2": "Este es el número de factura emitido desde que se creó esta cuenta."
 }

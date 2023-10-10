@@ -7,12 +7,13 @@ try:
     import sys
     from SRC.settings import *
     from datetime import datetime
-    from app import Add_data_Table
 except Exception as e:
-    print(e)
+    pass
+
 
 class Main(QMainWindow):
     def __init__(self):
+        self.login = None
         try:
             super().__init__()
             uic.loadUi("UI/mainwindow.ui", self)
@@ -25,9 +26,15 @@ class Main(QMainWindow):
 
     def open_windows(self):
         try:
-            self.close()
-            self.login = Login()
-            self.login.show()
+            check = check_log()
+            if not check:
+               self.close()
+               self.login = Login()
+               self.login.show()
+            else:
+                self.close()
+                self.facturate = Facturation()
+                self.facturate.show()
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
@@ -53,9 +60,9 @@ class Login(QMainWindow):
         try:
             user = self.inputuser.text()
             password = self.passwordinput.text()
-
             if user == "admin":
                 if password == "1234":
+                    proccess_log(enterprise_name ="Grupo ramos SRL", logued=True, id=1, facturation=1, user="user", password="password")
                     self.close()
                     if self.open_window is None:
                         self.open_window = Facturation()
@@ -99,16 +106,17 @@ class Facturation(QMainWindow):
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
 
-            self.information_1.clicked.connect(self.open_information)
+            self.name_enterprise.setText(USER_SESSION["enterprise_name"])
+
+            self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
+            self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
 
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
-
-    def open_information(self):
-        QMessageBox.information(self, "Información", APP_INFORMATIONS["info1"])
-
+    def open_information(self, message):
+        QMessageBox.information(self, "Información", message)
 
     def close_app(self):
         try:
