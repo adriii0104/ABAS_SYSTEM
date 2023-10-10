@@ -1,6 +1,6 @@
-#ABAS SYSTEM
+# ABAS SYSTEM
 
-#Sobre ABAS
+## Sobre ABAS
 
 Abas será un sistema especializado en la facturación de pequeñas empresas.
 
@@ -9,7 +9,7 @@ Con Abas podrás capturar pagos en linea, cobrar con serial de cheques, agregar 
 Abas será un sistema de Facturación avanzado creado por Adriel Capellán Y Alexis Reyes.
 
 
-#Como correr el código
+### Pasos para ejecutar el código.
 
 Primero debes crear un entorno virtual de nombre ABAS ```python -m venv ABAS```.
 
@@ -27,3 +27,5 @@ y finalmente tendrás el archivo ejecutandose. Las credenciales de inicio de ses
 usuario: admin
 contraseña: 1234
 
+
+### Esperamos te haya gustado.

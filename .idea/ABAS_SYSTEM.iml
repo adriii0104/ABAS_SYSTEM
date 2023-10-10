@@ -6,7 +6,11 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.12" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.12 (ABAS_SYSTEM)" jdkType="Python SDK" />
+>>>>>>> 066f14ed8ecdb571d4b93328ce3f16e1f9c4ca8f
 =======
     <orderEntry type="jdk" jdkName="Python 3.12 (ABAS_SYSTEM)" jdkType="Python SDK" />
 >>>>>>> 066f14ed8ecdb571d4b93328ce3f16e1f9c4ca8f
