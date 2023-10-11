@@ -347,7 +347,7 @@ background: #BABABA;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/24.png</normaloff>../../../../.designer/IMGS/24.png</iconset>
+         <normaloff>../../.designer/IMGS/24.png</normaloff>../../.designer/IMGS/24.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -469,7 +469,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_12">
@@ -492,7 +492,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_15">
@@ -515,7 +515,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_17">
@@ -538,7 +538,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_15">
@@ -703,7 +703,7 @@ color: black;
 }</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="name_art">
        <property name="geometry">
         <rect>
          <x>280</x>
@@ -976,7 +976,7 @@ background: #BABABA;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/24.png</normaloff>../../../../.designer/IMGS/24.png</iconset>
+         <normaloff>../../.designer/IMGS/24.png</normaloff>../../.designer/IMGS/24.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1098,7 +1098,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_14">
@@ -1121,7 +1121,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_16">
@@ -1144,7 +1144,7 @@ color: black;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../.designer/IMGS/23.png</normaloff>../../../../.designer/IMGS/23.png</iconset>
+         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_14">
