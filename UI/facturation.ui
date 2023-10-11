@@ -28,7 +28,10 @@
 }
 #widget_3{
 	background: #f4f4f4;
-}</string>
+}
+QMainWindow {
+                background-color: red; /* Cambia el color de fondo de la barra de título */
+            }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
