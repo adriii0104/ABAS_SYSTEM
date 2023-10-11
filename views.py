@@ -194,8 +194,14 @@ class Module_products_un(QMainWindow):
 
     def add_data(self):
         Quantity = self.quantity.value()
-        Add_inventory(quantity=Quantity)
+        article = self.name_art.text()
+        Add_inventory(quantity=Quantity, name_art=article)
         self.quantity.setValue(0)
+        self.name_art.setText("")
+
+
+
+
 
     def close_assets(self):
         self.close()
