@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>207</width>
-    <height>707</height>
+    <width>210</width>
+    <height>793</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>207</width>
+    <width>210</width>
     <height>16777215</height>
    </size>
   </property>
@@ -38,7 +38,7 @@ background-color: rgb(0, 0, 0);
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>211</width>
+      <width>210</width>
       <height>861</height>
      </rect>
     </property>
@@ -140,12 +140,29 @@ background-color: rgb(100, 100, 100);
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="homebutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QFrame" name="facturationn">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>240</y>
+       <y>260</y>
        <width>171</width>
        <height>91</height>
       </rect>
@@ -200,7 +217,7 @@ background-color: rgb(100, 100, 100);
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="factbutton">
+     <widget class="QPushButton" name="facturationbutton">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -222,7 +239,7 @@ border: None;</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>350</y>
+       <y>390</y>
        <width>171</width>
        <height>91</height>
       </rect>
@@ -277,12 +294,29 @@ border: None;</string>
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="inventorybutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QFrame" name="clients">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>460</y>
+       <y>520</y>
        <width>171</width>
        <height>91</height>
       </rect>
@@ -337,12 +371,29 @@ border: None;</string>
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="clientbutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QFrame" name="suppliers">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>570</y>
+       <y>650</y>
        <width>171</width>
        <height>91</height>
       </rect>
@@ -395,6 +446,23 @@ border: None;</string>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="suppliersbutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -454,7 +522,7 @@ background: None;</string>
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="Line" name="line_3">
+    <widget class="Line" name="line_2">
      <property name="geometry">
       <rect>
        <x>210</x>

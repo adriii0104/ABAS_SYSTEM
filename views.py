@@ -66,7 +66,7 @@ class Login(QMainWindow):
                     proccess_log(enterprise_name="Grupo ramos SRL", logued=True, id=1, facturation=1)
                     self.close()
                     if self.open_window is None:
-                        self.open_window = home()
+                        self.open_window = Home()
                     self.open_window.show()
                 else:
                     QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
@@ -95,19 +95,14 @@ class Facturation(QMainWindow):
             self.setFixedSize(QSize(1400, 840))
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
-
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
-
             self.date.setText(datetime.now().strftime("%d/%m/%Y"))
             self.closes.clicked.connect(self.close_app)
-
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
-
             self.name_enterprise.setText(USER_SESSION["enterprise_name"])
-
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
 
@@ -172,6 +167,7 @@ class Module_products_un(QMainWindow):
         self.showMinimized()
 
 
+
 class Home(QMainWindow):
     def __init__(self):
         try:
@@ -180,8 +176,8 @@ class Home(QMainWindow):
             uic.loadUi("UI/home.ui", self)
             self.setFixedSize(QSize(211, 861))
             self.setWindowTitle("Inicio")
-            self.factbutton.clicked.connect(self.open_facturation)
-
+            self.facturationbutton.clicked.connect(self.open_facturation)
+            self.inventorybutton.clicked.connect(self.open_inventory)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
@@ -192,6 +188,10 @@ class Home(QMainWindow):
     def open_facturation(self):
         self.facturation_window = Facturation()
         self.facturation_window.show()
+
+    def open_inventory(self):
+        self.inventory_window = Module_products_un()
+        self.inventory_window.show()
 
 
 
