@@ -40,7 +40,6 @@ def proccess_log(**kwargs):
         loader = json.load(proccess)
         USER_SESSION["enterprise_name"] = loader["user_information"]["enterprise_name"]
 
-
 def check_log():
     if os.path.exists("JSON/temporary.json"):
         with open("JSON/temporary.json", "r", encoding="utf-8") as check:

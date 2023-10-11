@@ -66,7 +66,7 @@ class Login(QMainWindow):
                     proccess_log(enterprise_name="Grupo ramos SRL", logued=True, id=1, facturation=1)
                     self.close()
                     if self.open_window is None:
-                        self.open_window = home()
+                        self.open_window = Home()
                     self.open_window.show()
                 else:
                     QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
@@ -93,15 +93,12 @@ class Facturation(QMainWindow):
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
             self.setFixedSize(QSize(1400, 840))
-            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.setWindowTitle(APP_REQUERIMENTS[1])
 
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
 
             self.date.setText(datetime.now().strftime("%d/%m/%Y"))
-            self.closes.clicked.connect(self.close_app)
-
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
@@ -117,13 +114,6 @@ class Facturation(QMainWindow):
 
     def open_information(self, message):
         QMessageBox.information(self, "Información", message)
-
-    def close_app(self):
-        try:
-            self.close()
-        except Exception as e:
-            QMessageBox.critical(
-                self, "Error", "Error al cerrar la aplicación: " + str(e))
 
     def timere(self):
         try:
@@ -185,17 +175,8 @@ class Home(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-
     def close_assets(self):
         self.close()
-
     def open_facturation(self):
         self.facturation_window = Facturation()
         self.facturation_window.show()
-
-
-
-   
-        
-     
-

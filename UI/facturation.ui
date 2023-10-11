@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1490</width>
-    <height>798</height>
+    <height>782</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -20,17 +20,11 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#close{
-	background-color: transparent;
-}
-#centralwidget{
-	background: white;
-}
-#widget_3{
+   <string notr="true">#widget_3{
 	background: #f4f4f4;
 }
 QMainWindow {
-                background-color: red; /* Cambia el color de fondo de la barra de título */
+    background: white; /* Cambia el color de fondo de la barra de título */
             }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -95,7 +89,7 @@ QLabel{
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../IMGS/21.png</normaloff>../IMGS/21.png</iconset>
+       <normaloff>../../../../.designer/IMGS/21.png</normaloff>../../../../.designer/IMGS/21.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -463,7 +457,7 @@ margin-left: 7px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../IMGS/18.png</normaloff>../IMGS/18.png</iconset>
+        <normaloff>../../../../.designer/IMGS/18.png</normaloff>../../../../.designer/IMGS/18.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -537,7 +531,7 @@ margin-left: 7px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
+        <normaloff>../../../../.designer/IMGS/12.png</normaloff>../../../../.designer/IMGS/12.png</iconset>
       </property>
      </widget>
     </widget>
@@ -1031,7 +1025,7 @@ border-right: 1px solid black;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../IMGS/14.png</normaloff>../IMGS/14.png</iconset>
+       <normaloff>../../../../.designer/IMGS/14.png</normaloff>../../../../.designer/IMGS/14.png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_3">
@@ -1058,7 +1052,7 @@ border-right: 1px solid black;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../IMGS/15.png</normaloff>../IMGS/15.png</iconset>
+       <normaloff>../../../../.designer/IMGS/15.png</normaloff>../../../../.designer/IMGS/15.png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_4">
@@ -1085,7 +1079,7 @@ border-right: 1px solid black;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../IMGS/16.png</normaloff>../IMGS/16.png</iconset>
+       <normaloff>../../../../.designer/IMGS/16.png</normaloff>../../../../.designer/IMGS/16.png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
@@ -1112,7 +1106,7 @@ border-right: 1px solid black;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../IMGS/17.png</normaloff>../IMGS/17.png</iconset>
+       <normaloff>../../../../.designer/IMGS/17.png</normaloff>../../../../.designer/IMGS/17.png</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="label_18">
@@ -1188,7 +1182,7 @@ border-right: 1px solid black;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
+       <normaloff>../../../../.designer/IMGS/12.png</normaloff>../../../../.designer/IMGS/12.png</iconset>
      </property>
     </widget>
    </widget>
@@ -1222,58 +1216,6 @@ border-right: 1px solid black;</string>
      </property>
      <property name="text">
       <string>ABAS SYSTEM</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="closes">
-     <property name="geometry">
-      <rect>
-       <x>1340</x>
-       <y>3</y>
-       <width>75</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/08.png</normaloff>../IMGS/08.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>22</width>
-       <height>22</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="minimize">
-     <property name="geometry">
-      <rect>
-       <x>1290</x>
-       <y>10</y>
-       <width>75</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/09.png</normaloff>../IMGS/09.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>22</width>
-       <height>22</height>
-      </size>
      </property>
     </widget>
    </widget>
