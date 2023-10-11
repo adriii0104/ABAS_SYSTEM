@@ -94,17 +94,13 @@ class Facturation(QMainWindow):
             uic.loadUi("UI/facturation.ui", self)
             self.setFixedSize(QSize(1400, 840))
             self.setWindowTitle(APP_REQUERIMENTS[1])
-
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
-
             self.date.setText(datetime.now().strftime("%d/%m/%Y"))
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
-
             self.name_enterprise.setText(USER_SESSION["enterprise_name"])
-
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
 
@@ -162,6 +158,7 @@ class Module_products_un(QMainWindow):
         self.showMinimized()
 
 
+
 class Home(QMainWindow):
     def __init__(self):
         try:
@@ -170,8 +167,8 @@ class Home(QMainWindow):
             uic.loadUi("UI/home.ui", self)
             self.setFixedSize(QSize(211, 861))
             self.setWindowTitle("Inicio")
-            self.factbutton.clicked.connect(self.open_facturation)
-
+            self.facturationbutton.clicked.connect(self.open_facturation)
+            self.inventorybutton.clicked.connect(self.open_inventory)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))

@@ -197,7 +197,7 @@ border: 1px solid gray;
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>Codigo del activo *</string>
+      <string>Nombre</string>
      </property>
     </widget>
     <widget class="QLabel" name="datebuylabel">
