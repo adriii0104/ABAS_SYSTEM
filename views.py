@@ -48,7 +48,7 @@ class Login(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/login.ui", self)
-            self.setFixedSize(QSize(height, width))
+            self.setFixedSize(QSize(width, height))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
             self.Togglepassword.clicked.connect(self.toggle_echo_mode)
