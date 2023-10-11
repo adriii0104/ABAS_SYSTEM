@@ -85,14 +85,13 @@ class Login(QMainWindow):
         else:
             self.password.setEchoMode(QLineEdit.EchoMode.Password)
 
-
 class Facturation(QMainWindow):
     def __init__(self):
         try:
             # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
-            self.setFixedSize(QSize(1400, 840))
+            self.setFixedSize(QSize(int(pw), int(ph)))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
@@ -165,7 +164,7 @@ class Home(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/home.ui", self)
-            self.setFixedSize(QSize(211, 861))
+            self.setFixedSize(QSize(width, height))
             self.setWindowTitle("Inicio")
             self.facturationbutton.clicked.connect(self.open_facturation)
             self.inventorybutton.clicked.connect(self.open_inventory)
@@ -176,8 +175,10 @@ class Home(QMainWindow):
         self.close()
     def open_facturation(self):
         self.facturation_window = Facturation()
+        self.facturation_window.move(225, 40)
         self.facturation_window.show()
 
     def open_inventory(self):
         self.inventory_window = Module_products_un()
+        self.inventory_window.move(225, 40)
         self.inventory_window.show()

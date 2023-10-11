@@ -58,3 +58,8 @@ monitor = get_monitors()
 for monitores in monitor:
     width = monitores.width
     height = monitores.height
+
+pw = width * 0.90
+ph = height * 0.80
+
+
