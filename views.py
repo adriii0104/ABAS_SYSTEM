@@ -7,6 +7,7 @@ try:
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
     import sys
     from SRC.settings import *
+    from SRC.data import Add_inventory
     from datetime import datetime
 except Exception as e:
     pass
@@ -91,21 +92,61 @@ class Facturation(QMainWindow):
             # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
-            self.setFixedSize(QSize(int(pw), int(ph)))
+            self.setFixedSize(QSize(int(1400), int(ph)))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
             self.date.setText(datetime.now().strftime("%d/%m/%Y"))
+            self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
             self.name_enterprise.setText(USER_SESSION["enterprise_name"])
+            self.add.clicked.connect(self.Add_Item)
+            self.clearr.clicked.connect(self.clearing)
+
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
 
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+    def clearing(self):
+        # Obtén el número total de filas en el QTableWidget
+        num_filas = self.tableWidget_2.rowCount()
+
+        # Elimina cada fila una por una, comenzando desde la última fila y retrocediendo
+        for i in range(num_filas - 1, -1, -1):
+            self.tableWidget_2.removeRow(i)
+
+    def Add_Item(self):
+        next_row = self.tableWidget_2.rowCount()
+        Quantity = self.quantity.value()
+
+        producto_item1 = QTableWidgetItem(f"Producto1")
+        producto_item2 = QTableWidgetItem(f"{next_row + 1}")
+        producto_item3 = QTableWidgetItem(str(Quantity))
+        producto_item4 = QTableWidgetItem(f"Producto4")
+        producto_item5 = QTableWidgetItem(f"Producto5")
+        producto_item6 = QTableWidgetItem(f"Producto6")
+        producto_item7 = QTableWidgetItem(f"Producto7")
+        producto_item8 = QTableWidgetItem(f"Producto8")
+        producto_item9 = QTableWidgetItem(f"Producto9")
+
+
+        self.tableWidget_2.insertRow(next_row)  # Insertar una nueva fila
+        self.tableWidget_2.setItem(next_row, 0, producto_item1)
+        self.tableWidget_2.setItem(next_row, 1, producto_item2)
+        self.tableWidget_2.setItem(next_row, 2, producto_item3)
+        self.tableWidget_2.setItem(next_row, 3, producto_item4)
+        self.tableWidget_2.setItem(next_row, 4, producto_item5)
+        self.tableWidget_2.setItem(next_row, 5, producto_item6)
+        self.tableWidget_2.setItem(next_row, 6, producto_item7)
+        self.tableWidget_2.setItem(next_row, 7, producto_item8)
+
+        self.quantity.setValue(0)
+
 
     def open_information(self, message):
         QMessageBox.information(self, "Información", message)
@@ -117,8 +158,6 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-
-
 class registerassets(QMainWindow):
     def __init__(self):
         try:
@@ -143,12 +182,20 @@ class Module_products_un(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/modulo_producto_unidad.ui", self)
+
             self.setFixedSize(QSize(860, 780))
             self.setWindowTitle("Inventario")
+            self.add_button.clicked.connect(self.add_data)
 
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+
+    def add_data(self):
+        Quantity = self.quantity.value()
+        Add_inventory(quantity=Quantity)
+        self.quantity.setValue(0)
 
     def close_assets(self):
         self.close()

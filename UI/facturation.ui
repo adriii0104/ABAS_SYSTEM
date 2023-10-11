@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1490</width>
-    <height>782</height>
+    <width>1481</width>
+    <height>960</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -34,7 +34,7 @@ QMainWindow {
       <x>0</x>
       <y>30</y>
       <width>111</width>
-      <height>801</height>
+      <height>861</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -89,7 +89,7 @@ QLabel{
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../.designer/IMGS/21.png</normaloff>../../../../.designer/IMGS/21.png</iconset>
+       <normaloff>../IMGS/21.png</normaloff>../IMGS/21.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -138,16 +138,16 @@ QLabel{
       <string notr="true">margin-left:9px;</string>
      </property>
      <property name="text">
-      <string>10/22.2023</string>
+      <string/>
      </property>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>100</x>
       <y>30</y>
-      <width>1301</width>
+      <width>1311</width>
       <height>161</height>
      </rect>
     </property>
@@ -281,11 +281,16 @@ QLabel{
      </property>
      <item>
       <property name="text">
+       <string>Selecciona</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>1- Crédito</string>
       </property>
      </item>
     </widget>
-    <widget class="QSpinBox" name="spinBox">
+    <widget class="QSpinBox" name="quantity">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -358,6 +363,11 @@ QLabel{
      </property>
      <item>
       <property name="text">
+       <string>Selecciona</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>Efectivo</string>
       </property>
      </item>
@@ -382,8 +392,8 @@ QLabel{
       <rect>
        <x>940</x>
        <y>0</y>
-       <width>361</width>
-       <height>171</height>
+       <width>461</width>
+       <height>181</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -457,7 +467,7 @@ margin-left: 7px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../.designer/IMGS/18.png</normaloff>../../../../.designer/IMGS/18.png</iconset>
+        <normaloff>../IMGS/18.png</normaloff>../IMGS/18.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -531,18 +541,39 @@ margin-left: 7px;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../../.designer/IMGS/12.png</normaloff>../../../../.designer/IMGS/12.png</iconset>
+        <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
       </property>
      </widget>
+    </widget>
+    <widget class="QPushButton" name="add">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>120</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Agregar</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
      <rect>
       <x>1010</x>
-      <y>590</y>
-      <width>391</width>
-      <height>251</height>
+      <y>620</y>
+      <width>401</width>
+      <height>271</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -720,10 +751,10 @@ margin-left: 7px;</string>
    <widget class="QTableWidget" name="tableWidget_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>210</y>
-      <width>1281</width>
-      <height>411</height>
+      <x>130</x>
+      <y>200</y>
+      <width>901</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -740,71 +771,6 @@ margin-left: 7px;</string>
     <property name="styleSheet">
      <string notr="true">border:none;</string>
     </property>
-    <row>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>1</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>2</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>3</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>4</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>5</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>6</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>7</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>8</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>9</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>10</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>11</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>12</string>
-     </property>
-    </row>
     <column>
      <property name="text">
       <string>Producto</string>
@@ -827,27 +793,7 @@ margin-left: 7px;</string>
     </column>
     <column>
      <property name="text">
-      <string>Disponibles</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bahnschrift Light</family>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>Cantidad</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bahnschrift Light</family>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Unidad</string>
      </property>
      <property name="font">
       <font>
@@ -912,7 +858,7 @@ margin-left: 7px;</string>
       <x>110</x>
       <y>620</y>
       <width>931</width>
-      <height>221</height>
+      <height>271</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1028,7 +974,7 @@ border-right: 1px solid black;</string>
        <normaloff>../../../../.designer/IMGS/14.png</normaloff>../../../../.designer/IMGS/14.png</iconset>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="clearr">
      <property name="geometry">
       <rect>
        <x>780</x>
@@ -1182,7 +1128,7 @@ border-right: 1px solid black;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../.designer/IMGS/12.png</normaloff>../../../../.designer/IMGS/12.png</iconset>
+       <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
      </property>
     </widget>
    </widget>
@@ -1191,7 +1137,7 @@ border-right: 1px solid black;</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1391</width>
+      <width>1411</width>
       <height>31</height>
      </rect>
     </property>
@@ -1219,12 +1165,202 @@ border-right: 1px solid black;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="widget_7" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>190</y>
+      <width>371</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #f4f4f4;
+border-bottom: 1px solid black;
+border-left: 1px solid black;
+border-top: 1px solid black;</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_13">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>280</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;
+border:none;</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string>Caducidad</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>210</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;
+border:none;</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>220</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string>Disponibles</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>150</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;
+border:none;</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>80</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;
+border:none;</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>160</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>90</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string>NOMBRE</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift SemiBold</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string>SELECCIONADO</string>
+     </property>
+    </widget>
+   </widget>
    <zorder>widget_2</zorder>
    <zorder>widget</zorder>
    <zorder>widget_4</zorder>
    <zorder>tableWidget_2</zorder>
    <zorder>widget_5</zorder>
    <zorder>widget_6</zorder>
+   <zorder>widget_7</zorder>
   </widget>
  </widget>
  <resources/>
