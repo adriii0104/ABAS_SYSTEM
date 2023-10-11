@@ -14,7 +14,7 @@ except Exception as e:
 
 class Main(QMainWindow):
     def __init__(self):
-        self.facturate = None
+        self.home = None
         self.login = None
         try:
             super().__init__()
@@ -35,8 +35,8 @@ class Main(QMainWindow):
                 self.login.show()
             else:
                 self.close()
-                self.facturate = Facturation()
-                self.facturate.show()
+                self.home = Home()
+                self.home.show()
         except Exception as e:
             print(e)
 
@@ -66,7 +66,7 @@ class Login(QMainWindow):
                     proccess_log(enterprise_name="Grupo ramos SRL", logued=True, id=1, facturation=1)
                     self.close()
                     if self.open_window is None:
-                        self.open_window = Facturation()
+                        self.open_window = home()
                     self.open_window.show()
                 else:
                     QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
@@ -172,26 +172,26 @@ class Module_products_un(QMainWindow):
         self.showMinimized()
 
 
-# class Home(QMainWindow):
-#     def __init__(self):
-#         try:
-#             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
-#             super().__init__()
-#             uic.loadUi("UI/home.ui", self)
-#             self.setFixedSize(QSize(780, 640))
-#             self.setWindowTitle("Inicio")
-#             self.facturation.clicked.connect(self.open_facturation)
+class Home(QMainWindow):
+    def __init__(self):
+        try:
+            # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            super().__init__()
+            uic.loadUi("UI/home.ui", self)
+            self.setFixedSize(QSize(780, 640))
+            self.setWindowTitle("Inicio")
+            self.facturation.clicked.connect(self.open_facturation)
 
-#         except Exception as e:
-#             QMessageBox.critical(
-#                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
 
-#     def close_assets(self):
-#         self.close()
+    def close_assets(self):
+        self.close()
 
-#     def open_facturation(self):
-#         self.facturation_window = Facturation()
-#         self.facturation_window.show()
+    def open_facturation(self):
+        self.facturation_window = Facturation()
+        self.facturation_window.show()
         
      
 
