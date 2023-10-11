@@ -19,6 +19,11 @@
   <property name="windowTitle">
    <string>ABA$ $ystem</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>../IMGS/27.png</normalon>
+   </iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(224, 224, 224);</string>
   </property>
