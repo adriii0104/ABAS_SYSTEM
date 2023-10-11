@@ -1,5 +1,6 @@
 import json
 import os
+from screeninfo import get_monitors
 
 with open('JSON/settings.json', 'r') as f:
     settings = json.load(f)
@@ -51,3 +52,9 @@ def check_log():
                 return True
     else:
         return False
+
+monitor = get_monitors()
+
+for monitores in monitor:
+    width = monitores.width
+    height = monitores.height
