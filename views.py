@@ -48,7 +48,7 @@ class Login(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/login.ui", self)
-            self.setFixedSize(QSize(480, 440))
+            self.setFixedSize(QSize(611, 521))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.version.setText(APP_REQUERIMENTS[0])
             self.Togglepassword.clicked.connect(self.toggle_echo_mode)
@@ -177,3 +177,7 @@ class Home(QMainWindow):
     def open_facturation(self):
         self.facturation_window = Facturation()
         self.facturation_window.show()
+
+    def open_inventory(self):
+        self.inventory_window = Module_products_un()
+        self.inventory_window.show()
