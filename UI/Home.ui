@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1133</width>
-    <height>719</height>
+    <width>210</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -135,7 +135,7 @@ background-color: rgb(100, 100, 100);
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="facturation">
+    <widget class="QFrame" name="facturationn">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -192,6 +192,23 @@ background-color: rgb(100, 100, 100);
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="factbutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>

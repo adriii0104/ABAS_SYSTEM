@@ -178,9 +178,9 @@ class Home(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/home.ui", self)
-            self.setFixedSize(QSize(780, 640))
+            self.setFixedSize(QSize(211, 861))
             self.setWindowTitle("Inicio")
-            self.facturation.clicked.connect(self.open_facturation)
+            self.factbutton.clicked.connect(self.open_facturation)
 
         except Exception as e:
             QMessageBox.critical(
@@ -192,6 +192,10 @@ class Home(QMainWindow):
     def open_facturation(self):
         self.facturation_window = Facturation()
         self.facturation_window.show()
+
+
+
+   
         
      
 
