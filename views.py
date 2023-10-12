@@ -104,6 +104,7 @@ class Facturation(QMainWindow):
             self.add.clicked.connect(self.Add_Item)
             self.clearr.clicked.connect(self.clearing)
             self.status.clicked.connect(self.connected)
+            self.searchbutton.clicked.connect(self.search)
 
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
@@ -123,6 +124,27 @@ class Facturation(QMainWindow):
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
+    def search(self):
+        if "LOGUED" in USER_SESSION:
+            id = self.id.text()
+            data = search_product(id_product=id)
+            if data:
+                self.productname.setText(data["Name"])
+                self.productID.setText(id)
+                self.available.setText(data["Quantity"])
+                self.cd.setText(data["Expiration_date"])
+            else:
+                QMessageBox.information(self, "Error", "El producto no se ha encontrado.")
+        else:
+            QMessageBox.information(self, "Error", "Para completar esta actividad debe entrar en el servidor.")
+            self.close()
+            LAST_WINDOW["last"] = "Facturation"
+            self.altern = Alter_log()
+            self.altern.show()
+
+
+
+
     def connected(self):
         if "LOGUED" in USER_SESSION:
             QMessageBox.information(self, "Conectado", "Este dispositivo está conectado al servidor y se puede realizar cualquier actividad.")
@@ -131,6 +153,8 @@ class Facturation(QMainWindow):
             LAST_WINDOW["last"] = "Facturation"
             self.altern = Alter_log()
             self.altern.show()
+
+
     def clearing(self):
         # Obtén el número total de filas en el QTableWidget
         num_filas = self.tableWidget_2.rowCount()
@@ -177,14 +201,14 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-class registerassets(QMainWindow):
+class registersuppliers(QMainWindow):
     def __init__(self):
         try:
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
-            uic.loadUi("UI/registerassets.ui", self)
+            uic.loadUi("UI/registersuppliers.ui", self)
             self.setFixedSize(QSize(780, 640))
-            self.setWindowTitle("Registrar activo")
+            self.setWindowTitle("Registrar aproveedor")
             self.cancelbutton.clicked.connect(self.close_assets)
 
         except Exception as e:
@@ -202,7 +226,7 @@ class Module_products_un(QMainWindow):
             super().__init__()
             uic.loadUi("UI/modulo_producto_unidad.ui", self)
 
-            self.setFixedSize(QSize(870, int(ph)))
+            self.setFixedSize(QSize(870, 1200))
             self.setWindowTitle("Inventario")
             date = QDate.currentDate()
             self.date_expired.setDate(date)
@@ -212,6 +236,10 @@ class Module_products_un(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+
+    def searchsupplier(self):
+        pass
 
 
     def add_data(self):
@@ -276,6 +304,7 @@ class Home(QMainWindow):
             self.setWindowTitle("Inicio")
             self.facturationbutton.clicked.connect(self.open_facturation)
             self.inventorybutton.clicked.connect(self.open_inventory)
+            self.suppliersbutton.clicked.connect(self.open_suppliers)
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
@@ -292,11 +321,14 @@ class Home(QMainWindow):
             self.inventory_window.move(225, 40)
             self.inventory_window.show()
         else:
-            QMessageBox.critical(self, "Error", "Para poder abrir esta ventana necesita volver a iniciar sesión")
-            text, ok = QInputDialog.getText(self, 'Digite la contraseña para acceder', 'Ingresa su contraseña para acceder al input:')
-
-            if ok:
-                print(f'Valor ingresado: {text}')
+            LAST_WINDOW["last"] = "Inventory"
+            self.altern = Alter_log()
+            self.altern.show()
+    
+    def open_suppliers(self):
+        self.suppliers_window = registersuppliers()
+        self.suppliers_window.move(225, 40)
+        self.suppliers_window.show()
 
 
 class Alter_log(QMainWindow):
@@ -327,6 +359,9 @@ class Alter_log(QMainWindow):
             QMessageBox.information(self, "Ya te has conectado.", "Ya tienes acceso.")
             if LAST_WINDOW["last"] == "Facturation":
                 self.last = Facturation()
+                self.last.show()
+            elif LAST_WINDOW["last"] == "Inventory":
+                self.last = Module_products_un()
                 self.last.show()
         else:
             QMessageBox.information(self, "Error", "Credenciales invalidas.")

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>890</width>
-    <height>891</height>
+    <height>876</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,18 +57,28 @@ font: 25 8pt &quot;Bahnschrift Light&quot;;</string>
 
 
 QLineEdit{
-
 padding-left: 5px; 
+}
 
 
-}</string>
+}
+
+QComboBox {
+color: rgb(0, 0, 0);
+background-color: rgb(224, 224, 224);
+border: 1px solid gray;
+}
+
+
+QComboBox::drop-down {
+    border-bottom-right-radius: 3px;</string>
       </property>
       <widget class="QLineEdit" name="code">
        <property name="geometry">
         <rect>
          <x>280</x>
          <y>100</y>
-         <width>331</width>
+         <width>221</width>
          <height>31</height>
         </rect>
        </property>
@@ -228,8 +238,8 @@ background: white;</string>
       <widget class="QLabel" name="label_29">
        <property name="geometry">
         <rect>
-         <x>520</x>
-         <y>410</y>
+         <x>510</x>
+         <y>100</y>
          <width>71</width>
          <height>31</height>
         </rect>
@@ -549,6 +559,12 @@ background: white;</string>
          <height>21</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Light</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Activo</string>
        </property>
@@ -686,24 +702,14 @@ padding-bottom: 70px;
       <widget class="QCheckBox" name="itbis">
        <property name="geometry">
         <rect>
-         <x>600</x>
-         <y>410</y>
+         <x>590</x>
+         <y>100</y>
          <width>16</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
         <string/>
-       </property>
-      </widget>
-      <widget class="QTextBrowser" name="textBrowser">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>410</y>
-         <width>231</width>
-         <height>31</height>
-        </rect>
        </property>
       </widget>
       <widget class="QComboBox" name="category">
@@ -715,11 +721,14 @@ padding-bottom: 70px;
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Light</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">border: None;
-background-color: #E0E0E0;
-left: 5px;
-color: black;</string>
+        <string notr="true"/>
        </property>
        <item>
         <property name="text">
@@ -821,6 +830,47 @@ color: black;</string>
          <string>Otros</string>
         </property>
        </item>
+      </widget>
+      <widget class="QLineEdit" name="article_2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>410</y>
+         <width>291</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+
+border: None;
+background-color: #E0E0E0;
+left: 5px;
+color: black;
+
+}</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>410</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>../IMGS/13.png</normalon>
+        </iconset>
+       </property>
       </widget>
      </widget>
     </widget>

@@ -50,3 +50,19 @@ def data_user_send_post_log(**kwargs):
             return True
         else:
             return False
+
+
+
+def search_product(**kwargs):
+    url = "http://127.0.0.1:5000/request_data_abas_system/search"
+
+    data = {"enterprise_id": USER_SESSION["COMPANY_ID"], "inventory_id": kwargs["id_product"]}
+
+    response = requests.post(url, json=data, verify=False)
+
+    if response == 200:
+        DATA = response.json()
+        if DATA["found"]:
+            return DATA["data"]
+        else:
+            return False
