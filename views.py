@@ -4,10 +4,11 @@ try:
         QTableWidgetItem
     from PyQt6.QtGui import QIcon, QPainter, QFont, QMovie
     from PyQt6 import uic, QtCore, QtGui
-    from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize
+    from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize, QDateTime, QDate
     import sys
     from SRC.settings import *
     from SRC.data import Add_inventory
+    import re
     from datetime import datetime
 except Exception as e:
     pass
@@ -185,7 +186,10 @@ class Module_products_un(QMainWindow):
 
             self.setFixedSize(QSize(860, 780))
             self.setWindowTitle("Inventario")
-            self.add_button.clicked.connect(self.add_data)
+            date = QDate.currentDate()
+            self.date_expired.setDate(date)
+            self.date_buy.setText(datetime.now().strftime("%d/%m/%Y"))
+            self.add_button.clicked.connect(self.add_data)                
 
         except Exception as e:
             QMessageBox.critical(
@@ -193,11 +197,42 @@ class Module_products_un(QMainWindow):
 
 
     def add_data(self):
-        Quantity = self.quantity.value()
-        article = self.name_art.text()
-        Add_inventory(quantity=Quantity, name_art=article)
-        self.quantity.setValue(0)
-        self.name_art.setText("")
+        tryded = True
+        for qline in self.findChildren(QLineEdit):
+            if qline.text().isspace() or qline.text() == "":
+                QMessageBox.critical(
+                    self, "Error", "Hay uno o más elementos vacíos")
+                tryded = False
+                break
+        if self.quantity.value() == 0:
+                QMessageBox.critical(
+                    self, "Error", "La cantidad debe ser mayor a 0")
+                tryded = False
+        if tryded:
+            date = QDate.currentDate()
+            Article = self.article.text()
+            Unit_price = self.unit_price.text()
+            Quantity = self.quantity.value()
+            Avaliable = self.active.isChecked()
+            Itbis = self.itbis.isChecked()
+            Description = self.description.text()
+            Date_expired = self.date_expired.text()
+            Category = self.category.text()
+            Brand = self.brand.text()
+            Code = self.code.text()
+            Add_inventory(quantity=Quantity, article=Article, code=Code, unit_price=Unit_price, 
+                          active=Avaliable, itbis=Itbis, description=Description, 
+                          date_expired=Date_expired, category=Category, brand=Brand)
+            self.article.setText("")
+            self.unit_price.setText("")
+            self.quantity.setValue(0)
+            self.code.setText("")
+            self.active.setChecked(False)
+            self.itbis.setChecked(False)
+            self.description.setText("")
+            self.date_expired.setDate(date)
+            self.category.setText("")
+            self.brand.setText("")
 
 
 
