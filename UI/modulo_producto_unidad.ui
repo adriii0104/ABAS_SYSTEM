@@ -591,26 +591,6 @@ background: white;</string>
         <string>Categoria *</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="category">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>250</y>
-         <width>331</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLineEdit {
-
-border: None;
-background-color: #E0E0E0;
-left: 5px;
-color: black;
-
-}</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_36">
        <property name="geometry">
         <rect>
@@ -725,6 +705,122 @@ padding-bottom: 70px;
          <height>31</height>
         </rect>
        </property>
+      </widget>
+      <widget class="QComboBox" name="category">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>251</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;
+background-color: #E0E0E0;
+left: 5px;
+color: black;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Selecciona</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Automoción</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Arte y Manualidades</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Comida</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Electrónica de Consumo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Electrodomésticos</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Herramientas y Equipos</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hogar y Decoración</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Juguetes y Entretenimiento</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Joyas y Accesorios Personales</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Materiales de Construcción</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Material de Oficina</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Productos de Limpieza</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Productos para Mascotas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ropa y Accesorios</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Salud y Belleza</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Suministros de Construcción</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Suministros de Oficina</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tecnología</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Otros</string>
+        </property>
+       </item>
       </widget>
      </widget>
     </widget>

@@ -1,6 +1,7 @@
 import json
 import os
 from screeninfo import get_monitors
+import hashlib
 
 with open('JSON/settings.json', 'r') as f:
     settings = json.load(f)
@@ -32,6 +33,7 @@ APP_INFORMATIONS = {
 
 def proccess_log(**kwargs):
     with open("JSON/temporary.json", "w", encoding="utf-8") as proccess:
+        print(kwargs)
         json.dump({
             "user_information": kwargs, "data":{
                 "number_of_products": 0,
@@ -39,7 +41,6 @@ def proccess_log(**kwargs):
         }, proccess, indent=4)
     with open("JSON/temporary.json", "r", encoding="utf-8") as proccess:
         loader = json.load(proccess)
-        USER_SESSION["enterprise_name"] = loader["user_information"]["enterprise_name"]
 
 def check_log():
     if os.path.exists("JSON/temporary.json"):
@@ -48,7 +49,7 @@ def check_log():
             if not checked["user_information"]["logued"]:
                 return False
             else:
-                USER_SESSION["enterprise_name"] = checked["user_information"]["enterprise_name"]
+                USER_SESSION["COMPANY_NAME"] = checked["user_information"]["enterprise_name"]
                 return True
     else:
         return False
@@ -61,5 +62,14 @@ for monitores in monitor:
 
 pw = width * 0.90
 ph = height * 0.80
+
+
+
+LAST_WINDOW = {}
+
+def hash_pass(**passwd):
+    psw = hashlib.sha256(passwd["pass_auth_user_get_input"].encode()).hexdigest()
+    return psw
+
 
 

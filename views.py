@@ -1,13 +1,13 @@
 try:
     from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox, QCheckBox, QListView, QListWidgetItem, \
         QPushButton, QApplication, QDialog, QLabel, QLineEdit, QVBoxLayout, QPushButton, QWidget, QFormLayout, \
-        QTableWidgetItem
+        QTableWidgetItem, QInputDialog
     from PyQt6.QtGui import QIcon, QPainter, QFont, QMovie
     from PyQt6 import uic, QtCore, QtGui
     from PyQt6.QtCore import Qt, QTimer, QDateTime, QSize, QDateTime, QDate
     import sys
     from SRC.settings import *
-    from SRC.data import Add_inventory
+    from SRC.data import *
     import re
     from datetime import datetime
 except Exception as e:
@@ -40,7 +40,7 @@ class Main(QMainWindow):
                 self.home = Home()
                 self.home.show()
         except Exception as e:
-            print(e)
+            QMessageBox.critical(self, "Error", "Ha ocurrido un error inesperado" + str(e))
 
 
 class Login(QMainWindow):
@@ -62,22 +62,20 @@ class Login(QMainWindow):
     def login(self):
         try:
             user = self.inputuser.text()
-            password = self.passwordinput.text()
-            if user == "admin":
-                if password == "1234":
-                    proccess_log(enterprise_name="Grupo ramos SRL", logued=True, id=1, facturation=1)
-                    self.close()
-                    if self.open_window is None:
-                        self.open_window = Home()
-                    self.open_window.show()
-                else:
-                    QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
+            passwd = self.passwordinput.text()
+
+            password = hash_pass(pass_auth_user_get_input=passwd)
+            response = data_user_send_post_log(user_log_data_send_input=user, pass_log_data_send_input=password)
+            if response:
+                self.close()
+                if self.open_window is None:
+                    self.open_window = Home()
+                self.open_window.show()
             else:
                 QMessageBox.critical(self, "Error", "Las credenciales son invalidas.")
-
         except Exception as e:
             QMessageBox.critical(
-                self, "Error", "Error al iniciar la aplicación: " + str(e))
+               self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def toggle_echo_mode(self):
         current_echo_mode = self.password.echoMode()
@@ -102,17 +100,37 @@ class Facturation(QMainWindow):
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
             self.timee.start(1000)
-            self.name_enterprise.setText(USER_SESSION["enterprise_name"])
+            self.name_enterprise.setText(USER_SESSION["COMPANY_NAME"])
             self.add.clicked.connect(self.Add_Item)
             self.clearr.clicked.connect(self.clearing)
+            self.status.clicked.connect(self.connected)
 
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
+
+            if "LOGUED" not in USER_SESSION:
+                self.status.setText("Desconectado")
+                icon = QIcon('IMGS/34.png')
+                self.status.setIcon(icon)
+                self.status.setIconSize(QSize(12, 12))
+            else:
+                self.status.setText("Conectado")
+                icon = QIcon('IMGS/35.png')
+                self.status.setIcon(icon)
+                self.status.setIconSize(QSize(12, 12))
 
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
+    def connected(self):
+        if "LOGUED" in USER_SESSION:
+            QMessageBox.information(self, "Conectado", "Este dispositivo está conectado al servidor y se puede realizar cualquier actividad.")
+        else:
+            self.close()
+            LAST_WINDOW["last"] = "Facturation"
+            self.altern = Alter_log()
+            self.altern.show()
     def clearing(self):
         # Obtén el número total de filas en el QTableWidget
         num_filas = self.tableWidget_2.rowCount()
@@ -184,7 +202,7 @@ class Module_products_un(QMainWindow):
             super().__init__()
             uic.loadUi("UI/modulo_producto_unidad.ui", self)
 
-            self.setFixedSize(QSize(860, 780))
+            self.setFixedSize(QSize(870, int(ph)))
             self.setWindowTitle("Inventario")
             date = QDate.currentDate()
             self.date_expired.setDate(date)
@@ -201,13 +219,16 @@ class Module_products_un(QMainWindow):
         for qline in self.findChildren(QLineEdit):
             if qline.text().isspace() or qline.text() == "":
                 QMessageBox.critical(
-                    self, "Error", "Hay uno o más elementos vacíos")
+                    self, "Error", "Hay uno o más elementos vacíos.")
                 tryded = False
                 break
         if self.quantity.value() == 0:
                 QMessageBox.critical(
-                    self, "Error", "La cantidad debe ser mayor a 0")
+                    self, "Error", "La cantidad debe ser mayor a 0.")
                 tryded = False
+        if self.category.currentText() == "Selecciona":
+            QMessageBox.critical(self, "Error", "Debes seleccionar la categoría.")
+            tryded = False
         if tryded:
             date = QDate.currentDate()
             Article = self.article.text()
@@ -217,7 +238,7 @@ class Module_products_un(QMainWindow):
             Itbis = self.itbis.isChecked()
             Description = self.description.text()
             Date_expired = self.date_expired.text()
-            Category = self.category.text()
+            Category = self.category.currentText()
             Brand = self.brand.text()
             Code = self.code.text()
             Add_inventory(quantity=Quantity, article=Article, code=Code, unit_price=Unit_price, 
@@ -231,9 +252,8 @@ class Module_products_un(QMainWindow):
             self.itbis.setChecked(False)
             self.description.setText("")
             self.date_expired.setDate(date)
-            self.category.setText("")
+            self.category.itemText(1)
             self.brand.setText("")
-
 
 
 
@@ -267,6 +287,46 @@ class Home(QMainWindow):
         self.facturation_window.show()
 
     def open_inventory(self):
-        self.inventory_window = Module_products_un()
-        self.inventory_window.move(225, 40)
-        self.inventory_window.show()
+        if "LOGUED" in USER_SESSION:
+            self.inventory_window = Module_products_un()
+            self.inventory_window.move(225, 40)
+            self.inventory_window.show()
+        else:
+            QMessageBox.critical(self, "Error", "Para poder abrir esta ventana necesita volver a iniciar sesión")
+            text, ok = QInputDialog.getText(self, 'Digite la contraseña para acceder', 'Ingresa su contraseña para acceder al input:')
+
+            if ok:
+                print(f'Valor ingresado: {text}')
+
+
+class Alter_log(QMainWindow):
+    def __init__(self):
+        try:
+            # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            super().__init__()
+            uic.loadUi("UI/altern_log.ui", self)
+            self.setWindowTitle("Please Log")
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+            self.closer.clicked.connect(self.closedd)
+            self.log.clicked.connect(self.login)
+        except Exception as e:
+            QMessageBox.critical(
+                self, "Error", "Error al iniciar la aplicación: " + str(e))
+    def closedd(self):
+        self.close()
+
+    def login(self):
+        passwd = self.input_password.text()
+        password = hash_pass(pass_auth_user_get_input=passwd)
+        with open("JSON/temporary.json", "r", encoding="utf-8") as check:
+            checked = json.load(check)
+            user = checked["user_information"]["user"]
+        response = data_user_send_post_log(user_log_data_send_input=user, pass_log_data_send_input=password)
+        if response:
+            self.close()
+            QMessageBox.information(self, "Ya te has conectado.", "Ya tienes acceso.")
+            if LAST_WINDOW["last"] == "Facturation":
+                self.last = Facturation()
+                self.last.show()
+        else:
+            QMessageBox.information(self, "Error", "Credenciales invalidas.")
