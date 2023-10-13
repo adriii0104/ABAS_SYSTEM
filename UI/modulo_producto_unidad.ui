@@ -58,6 +58,9 @@ font: 25 8pt &quot;Bahnschrift Light&quot;;</string>
 
 QLineEdit{
 padding-left: 5px; 
+background-color: rgb(224, 224, 224);
+color: black;
+border-radius: 3px;
 }
 
 
@@ -83,14 +86,7 @@ QComboBox::drop-down {
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLineEdit {
-
-border: None;
-background-color: #E0E0E0;
-left: 5px;
-color: black;
-
-}</string>
+        <string notr="true"/>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Normal</enum>
@@ -106,14 +102,7 @@ color: black;
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLineEdit {
-
-border: None;
-background-color: #E0E0E0;
-left: 5px;
-color: black;
-
-}</string>
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QLabel" name="label_9">
@@ -453,29 +442,6 @@ color: black;
          <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_18">
-       <property name="geometry">
-        <rect>
-         <x>240</x>
-         <y>510</y>
-         <width>21</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: none;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../.designer/IMGS/23.png</normaloff>../../.designer/IMGS/23.png</iconset>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="brand">
        <property name="geometry">
         <rect>
@@ -486,14 +452,7 @@ color: black;
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLineEdit {
-
-border: None;
-background-color: #E0E0E0;
-left: 5px;
-color: black;
-
-}</string>
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QLabel" name="label_32">
@@ -554,7 +513,7 @@ background: white;</string>
        <property name="geometry">
         <rect>
          <x>280</x>
-         <y>60</y>
+         <y>70</y>
          <width>61</width>
          <height>21</height>
         </rect>
@@ -639,16 +598,7 @@ background: white;</string>
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLineEdit {
-
-border: None;
-background-color: #E0E0E0;
-left: 5px;
-color: black;
-
-}
-
-QLineEdit{
+        <string notr="true">QLineEdit{
 padding-bottom: 70px;
 
 
@@ -831,7 +781,7 @@ padding-bottom: 70px;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="article_2">
+      <widget class="QLineEdit" name="searchsuppliers_input">
        <property name="geometry">
         <rect>
          <x>280</x>
@@ -851,7 +801,7 @@ color: black;
 }</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="searchsuppliers_button">
        <property name="geometry">
         <rect>
          <x>580</x>
@@ -1063,7 +1013,6 @@ color: black;
     </widget>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
