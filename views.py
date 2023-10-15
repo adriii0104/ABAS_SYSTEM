@@ -38,6 +38,7 @@ class Main(QMainWindow):
             else:
                 self.close()
                 self.home = Home()
+                self.home.move(0, 0)
                 self.home.show()
         except Exception as e:
             QMessageBox.critical(self, "Error", "Ha ocurrido un error inesperado" + str(e))
@@ -91,11 +92,11 @@ class Facturation(QMainWindow):
             # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
-            self.setFixedSize(QSize(int(1400), int(ph)))
+            self.setFixedSize(QSize(1200, 790))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
-            self.date.setText(datetime.now().strftime("%d/%m/%Y"))
+            # self.date.setText(datetime.now().strftime("%d/%m/%Y"))
             self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
             self.timee = QTimer(self)
             self.timee.timeout.connect(self.timere)
@@ -207,7 +208,7 @@ class registersuppliers(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/registersuppliers.ui", self)
-            self.setFixedSize(QSize(650, 580))
+            self.setFixedSize(QSize(540, 490))
             self.setWindowTitle("Registrar aproveedor")
             self.codeinput.setText(next(self.sequencecode()))
             self.codeinput.setReadOnly(True)
@@ -311,6 +312,7 @@ class Home(QMainWindow):
             super().__init__()
             uic.loadUi("UI/home.ui", self)
             self.setFixedSize(QSize(width, height))
+            self.menubar.setFixedSize(QSize(151, height))
             self.setWindowTitle("Inicio")
             self.facturationbutton.clicked.connect(self.open_facturation)
             self.inventorybutton.clicked.connect(self.open_inventory)
@@ -322,13 +324,13 @@ class Home(QMainWindow):
         self.close()
     def open_facturation(self):
         self.facturation_window = Facturation()
-        self.facturation_window.move(225, 40)
+        self.facturation_window.move(155, 35)
         self.facturation_window.show()
 
     def open_inventory(self):
         if "LOGUED" in USER_SESSION:
             self.inventory_window = Module_products_un()
-            self.inventory_window.move(225, 40)
+            self.inventory_window.move(155, 35)
             self.inventory_window.show()
         else:
             LAST_WINDOW["last"] = "Inventory"
@@ -337,7 +339,7 @@ class Home(QMainWindow):
     
     def open_suppliers(self):
         self.suppliers_window = registersuppliers()
-        self.suppliers_window.move(225, 40)
+        self.suppliers_window.move(155, 35)
         self.suppliers_window.show()
 
 

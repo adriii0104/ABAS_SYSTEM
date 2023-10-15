@@ -6,14 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>210</width>
-    <height>793</height>
+    <width>1311</width>
+    <height>820</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1110</width>
+    <height>820</height>
+   </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>111111</width>
+    <height>111111</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -25,7 +31,8 @@
    </iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(224, 224, 224);</string>
+   <string notr="true">
+background-color: rgb(190, 190, 190);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -38,43 +45,49 @@ background-color: rgb(0, 0, 0);
 
 }</string>
    </property>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="menubar" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>210</width>
-      <height>861</height>
+      <width>151</width>
+      <height>820</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QWidget{
-background-color: rgb(210, 210, 210);
+background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+stop: 0 rgb(190, 190, 190),
+stop: 1 #DCDCDC);
 } 
 
-QPushButton {
-color: rgb(0, 0, 0);
-background-color: rgb(224, 224, 224);
-border: 1px solid gray;
-border-radius: px;
+
+QPushButton{
+background-color: None;
+
 
 }
 
+QFrame {
+border-radius: 10;;
 
+
+
+}
 
 QFrame::hover {
 background: rgb(170, 170, 170);
 
 
+
 }
 
 QLabel {
-
 background: None;
 
 }
 
-#inicio, #facturacion, #inventario, #clientes, #proveedores{
+#inicio, #facturacion, #inventario, #clientes, #proveedores, #caja{
 font: 25 11pt &quot;Bahnschrift Light&quot;;
 
 
@@ -86,90 +99,35 @@ background-color: rgb(100, 100, 100);
 
 }</string>
     </property>
-    <widget class="QFrame" name="home">
+    <widget class="QLabel" name="logo">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
-       <width>171</width>
-       <height>91</height>
+       <y>10</y>
+       <width>111</width>
+       <height>111</height>
       </rect>
      </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color: None;</string>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+     <property name="text">
+      <string/>
      </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+     <property name="pixmap">
+      <pixmap>../IMGS/27.png</pixmap>
      </property>
-     <widget class="QLabel" name="inicio">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>60</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: None;</string>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Inicio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>10</y>
-        <width>51</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: None;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../IMGS/28.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="homebutton">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>171</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: None;
-border: None;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QFrame" name="facturationn">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>260</y>
-       <width>171</width>
-       <height>91</height>
+       <x>10</x>
+       <y>150</y>
+       <width>130</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="cursor">
@@ -187,7 +145,7 @@ border: None;</string>
      <widget class="QLabel" name="facturacion">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>59</y>
         <width>91</width>
         <height>31</height>
@@ -203,7 +161,7 @@ border: None;</string>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>40</x>
         <y>10</y>
         <width>51</width>
         <height>51</height>
@@ -227,12 +185,12 @@ border: None;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>171</width>
-        <height>91</height>
+        <width>130</width>
+        <height>90</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background: None;
+       <string notr="true">
 border: None;</string>
       </property>
       <property name="text">
@@ -243,10 +201,10 @@ border: None;</string>
     <widget class="QFrame" name="inventory">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>390</y>
-       <width>171</width>
-       <height>91</height>
+       <x>10</x>
+       <y>260</y>
+       <width>130</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="cursor">
@@ -264,7 +222,7 @@ border: None;</string>
      <widget class="QLabel" name="inventario">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>59</y>
         <width>91</width>
         <height>31</height>
@@ -280,7 +238,7 @@ border: None;</string>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>40</x>
         <y>10</y>
         <width>51</width>
         <height>51</height>
@@ -304,12 +262,12 @@ border: None;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>171</width>
-        <height>91</height>
+        <width>130</width>
+        <height>90</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background: None;
+       <string notr="true">
 border: None;</string>
       </property>
       <property name="text">
@@ -320,10 +278,10 @@ border: None;</string>
     <widget class="QFrame" name="clients">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>520</y>
-       <width>171</width>
-       <height>91</height>
+       <x>10</x>
+       <y>370</y>
+       <width>130</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="cursor">
@@ -341,7 +299,7 @@ border: None;</string>
      <widget class="QLabel" name="clientes">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>59</y>
         <width>91</width>
         <height>31</height>
@@ -357,7 +315,7 @@ border: None;</string>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>40</x>
         <y>10</y>
         <width>51</width>
         <height>51</height>
@@ -381,12 +339,12 @@ border: None;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>171</width>
-        <height>91</height>
+        <width>130</width>
+        <height>90</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background: None;
+       <string notr="true">
 border: None;</string>
       </property>
       <property name="text">
@@ -397,10 +355,10 @@ border: None;</string>
     <widget class="QFrame" name="suppliers">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>650</y>
-       <width>171</width>
-       <height>91</height>
+       <x>10</x>
+       <y>480</y>
+       <width>130</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="cursor">
@@ -418,7 +376,7 @@ border: None;</string>
      <widget class="QLabel" name="proveedores">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>59</y>
         <width>91</width>
         <height>31</height>
@@ -434,7 +392,7 @@ border: None;</string>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>40</x>
         <y>10</y>
         <width>51</width>
         <height>51</height>
@@ -458,12 +416,12 @@ border: None;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>171</width>
-        <height>91</height>
+        <width>130</width>
+        <height>90</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background: None;
+       <string notr="true">
 border: None;</string>
       </property>
       <property name="text">
@@ -471,74 +429,159 @@ border: None;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QLabel" name="title">
+    <widget class="QFrame" name="cash">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>0</y>
-       <width>111</width>
-       <height>81</height>
+       <x>10</x>
+       <y>590</y>
+       <width>130</width>
+       <height>90</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">font: 32pt &quot;Baskerville Old Face&quot;;
-
-background: None;</string>
-     </property>
-     <property name="text">
-      <string>ABA$ </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="logo">
-     <property name="geometry">
-      <rect>
-       <x>-10</x>
-       <y>-10</y>
-       <width>111</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: None;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../IMGS/27.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="Line" name="line">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>80</y>
-       <width>211</width>
-       <height>1</height>
-      </rect>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="cashlogo">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../IMGS/36.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="caja">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Caja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cashbutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>130</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
-    <widget class="Line" name="line_2">
+    <widget class="QFrame" name="banks">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>0</y>
-       <width>10</width>
-       <height>861</height>
+       <x>10</x>
+       <y>700</y>
+       <width>130</width>
+       <height>90</height>
       </rect>
      </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="bankslogo">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../IMGS/37.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bancos">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Bancos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="banksbutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>130</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
