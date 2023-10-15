@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
-    <height>658</height>
+    <width>650</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>780</width>
-    <height>640</height>
+    <width>650</width>
+    <height>580</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -35,8 +35,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>781</width>
-      <height>661</height>
+      <width>661</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -79,14 +79,20 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>780</width>
-        <height>640</height>
+        <width>650</width>
+        <height>580</height>
        </rect>
       </property>
       <property name="minimumSize">
        <size>
-        <width>780</width>
-        <height>640</height>
+        <width>650</width>
+        <height>580</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>650</width>
+        <height>580</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -99,6 +105,8 @@ QLineEdit {
 background-color: rgb(240, 240, 240);
 color: black;
 border-radius: 3px;
+padding-left: 5px;
+font: 25 10pt &quot;Bahnschrift Light&quot;;
 
 }
 
@@ -132,19 +140,17 @@ border: 1px solid gray;
 }
 </string>
       </property>
-      <widget class="QLineEdit" name="codigoinput">
+      <widget class="QLineEdit" name="nameinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>110</y>
          <width>381</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;
-
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
@@ -153,7 +159,7 @@ border: 1px solid gray;
       <widget class="QLabel" name="seriallabel">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>130</x>
          <y>60</y>
          <width>51</width>
          <height>31</height>
@@ -166,7 +172,7 @@ border: 1px solid gray;
       <widget class="QLabel" name="typelabel">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>140</x>
          <y>360</y>
          <width>51</width>
          <height>31</height>
@@ -176,24 +182,27 @@ border: 1px solid gray;
         <string>Email</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="serialinput">
+      <widget class="QLineEdit" name="codeinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>60</y>
          <width>191</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;</string>
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
       <widget class="QPushButton" name="cancelbutton">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>580</y>
+         <x>390</x>
+         <y>500</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -208,7 +217,7 @@ border: 1px solid gray;
       <widget class="QLabel" name="codelabel">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>20</x>
          <y>110</y>
          <width>181</width>
          <height>31</height>
@@ -224,7 +233,7 @@ border: 1px solid gray;
       <widget class="QLabel" name="grouplabel">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>120</x>
          <y>310</y>
          <width>71</width>
          <height>31</height>
@@ -234,23 +243,23 @@ border: 1px solid gray;
         <string>Telefono</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="modelinput">
+      <widget class="QLineEdit" name="directioinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>260</y>
          <width>381</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;</string>
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QLabel" name="brandlabel">
        <property name="geometry">
         <rect>
-         <x>130</x>
+         <x>90</x>
          <y>210</y>
          <width>101</width>
          <height>31</height>
@@ -260,23 +269,23 @@ border: 1px solid gray;
         <string>Tipo tercero *</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="nameinput">
+      <widget class="QLineEdit" name="rncinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>160</y>
          <width>381</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;</string>
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QLabel" name="modellabel">
        <property name="geometry">
         <rect>
-         <x>150</x>
+         <x>110</x>
          <y>260</y>
          <width>71</width>
          <height>31</height>
@@ -289,7 +298,7 @@ border: 1px solid gray;
       <widget class="QLabel" name="namelabel">
        <property name="geometry">
         <rect>
-         <x>130</x>
+         <x>90</x>
          <y>160</y>
          <width>111</width>
          <height>31</height>
@@ -302,8 +311,8 @@ border: 1px solid gray;
       <widget class="QPushButton" name="acceptbutton">
        <property name="geometry">
         <rect>
-         <x>630</x>
-         <y>580</y>
+         <x>510</x>
+         <y>500</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -315,10 +324,10 @@ border: 1px solid gray;
         <string>Guardar</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="typebox">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>210</y>
          <width>381</width>
          <height>30</height>
@@ -340,36 +349,36 @@ border: 1px solid gray;
         </property>
        </item>
       </widget>
-      <widget class="QLineEdit" name="serialinput_2">
+      <widget class="QLineEdit" name="phoneinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>310</y>
          <width>381</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;</string>
+        <string notr="true"/>
        </property>
       </widget>
-      <widget class="QLineEdit" name="serialinput_3">
+      <widget class="QLineEdit" name="emailinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>360</y>
          <width>381</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;</string>
+        <string notr="true"/>
        </property>
       </widget>
       <widget class="QLabel" name="typelabel_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>120</x>
          <y>410</y>
          <width>71</width>
          <height>31</height>
@@ -379,17 +388,17 @@ border: 1px solid gray;
         <string>Sitio web</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="serialinput_4">
+      <widget class="QLineEdit" name="websiteinput">
        <property name="geometry">
         <rect>
-         <x>270</x>
+         <x>230</x>
          <y>410</y>
          <width>381</width>
          <height>30</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">padding-left: 10px;</string>
+        <string notr="true"/>
        </property>
       </widget>
      </widget>
