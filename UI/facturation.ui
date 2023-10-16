@@ -632,7 +632,7 @@ margin-left: 7px;</string>
     <widget class="QPushButton" name="information_2">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>180</x>
        <y>120</y>
        <width>21</width>
        <height>23</height>
@@ -923,7 +923,7 @@ border-left: 1px solid black;
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>30</x>
        <y>60</y>
        <width>41</width>
        <height>31</height>
@@ -967,9 +967,9 @@ border-left: 1px solid black;
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>0</x>
        <y>20</y>
-       <width>61</width>
+       <width>71</width>
        <height>31</height>
       </rect>
      </property>
@@ -990,7 +990,7 @@ border-left: 1px solid black;
      <rect>
       <x>0</x>
       <y>161</y>
-      <width>921</width>
+      <width>930</width>
       <height>661</height>
      </rect>
     </property>
@@ -1267,9 +1267,9 @@ border:none;</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>140</x>
        <y>10</y>
-       <width>91</width>
+       <width>101</width>
        <height>16</height>
       </rect>
      </property>
