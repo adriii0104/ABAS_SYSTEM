@@ -92,7 +92,7 @@ class Facturation(QMainWindow):
             # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/facturation.ui", self)
-            self.setFixedSize(QSize(1200, 790))
+            self.setFixedSize(QSize(1270, 825))
             self.setWindowTitle(APP_REQUERIMENTS[1])
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.times = datetime.now().strftime("%H:%M:%S")
@@ -107,6 +107,8 @@ class Facturation(QMainWindow):
             self.clearr.clicked.connect(self.clearing)
             self.status.clicked.connect(self.connected)
             self.searchbutton.clicked.connect(self.search)
+            self.closebutton.clicked.connect(self.close_facturation)
+            self.minimizedbutton.clicked.connect(self.minimized_facturation)  
 
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
@@ -116,6 +118,7 @@ class Facturation(QMainWindow):
                 icon = QIcon('IMGS/34.png')
                 self.status.setIcon(icon)
                 self.status.setIconSize(QSize(12, 12))
+
             else:
                 self.status.setText("Conectado")
                 icon = QIcon('IMGS/35.png')
@@ -144,7 +147,10 @@ class Facturation(QMainWindow):
             self.altern = Alter_log()
             self.altern.show()
 
-
+    def close_facturation(self):
+        self.close()
+    def minimized_facturation(self):
+        self.showMinimized()
 
 
     def connected(self):
@@ -203,6 +209,8 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+
+    
         
 class registersuppliers(QMainWindow):
     def __init__(self):
@@ -316,14 +324,15 @@ class Home(QMainWindow):
             self.inventorybutton.clicked.connect(self.open_inventory)
             self.suppliersbutton.clicked.connect(self.open_suppliers)
 
+            self.facturation = Facturation()
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
-    def close_assets(self):
-        self.close()
+    
+
     def open_facturation(self):
         self.facturation_window = Facturation()
-        self.facturation_window.move(155, 35)
+        self.facturation_window.move(152, 32)
         self.facturation_window.show()
 
     def open_inventory(self):
