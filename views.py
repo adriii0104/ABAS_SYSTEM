@@ -233,6 +233,10 @@ class registersuppliers(QMainWindow):
     def close_assets(self):
         self.close()
 
+    def add_supplier(self):
+        name = self.nameinput.Text()
+
+
 
 class Module_products_un(QMainWindow):
     def __init__(self):
