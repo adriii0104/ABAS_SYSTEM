@@ -210,7 +210,6 @@ class Facturation(QMainWindow):
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     
-        
 class registersuppliers(QMainWindow):
     def __init__(self):
         try:
