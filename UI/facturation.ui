@@ -39,8 +39,10 @@ QMainWindow {
     </property>
     <property name="styleSheet">
      <string notr="true">#widget_2{
-	border-bottom: 1px solid black;
-	background: #f4f4f4;
+border-bottom: 1px solid black;
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+stop: 0 rgb(210, 210, 210),
+stop: 1 #DCDCDC);
 
 }</string>
     </property>
@@ -286,6 +288,9 @@ QMainWindow {
      <property name="styleSheet">
       <string notr="true">#widget_3{
 		border-left: 1px solid black;
+background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+stop: 0 rgb(210, 210, 210),
+stop: 1 #DCDCDC);
 }</string>
      </property>
      <widget class="QLabel" name="label_9">
@@ -431,6 +436,19 @@ margin-left: 7px;</string>
         <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
       </property>
      </widget>
+     <widget class="QLabel" name="timering">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;10:11:00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QPushButton" name="clearr">
      <property name="geometry">
@@ -518,7 +536,7 @@ margin-left: 7px;</string>
       <rect>
        <x>40</x>
        <y>130</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
@@ -556,23 +574,10 @@ margin-left: 7px;</string>
        <normaloff>../IMGS/12.png</normaloff>../IMGS/12.png</iconset>
      </property>
     </widget>
-    <widget class="QLabel" name="timering">
-     <property name="geometry">
-      <rect>
-       <x>830</x>
-       <y>10</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;10:11:00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="status">
      <property name="geometry">
       <rect>
-       <x>730</x>
+       <x>790</x>
        <y>10</y>
        <width>91</width>
        <height>21</height>
@@ -605,8 +610,9 @@ margin-left: 7px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">#widget_4{
-
-background: #f4f4f4;
+background: qlineargradient(x1: 1, y1: 0, x2: 0, y2: 0,
+stop: 0 rgb(210, 210, 210),
+stop: 1 #DCDCDC);
 border-left: 1px solid black;
 
 }</string>
@@ -922,7 +928,8 @@ border-left: 1px solid black;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:none;</string>
+     <string notr="true">border:none;
+background-color: rgb(240, 240, 240);</string>
     </property>
     <column>
      <property name="text">
@@ -1016,11 +1023,12 @@ border-left: 1px solid black;
     </property>
     <property name="styleSheet">
      <string notr="true">#widget_7{
-background: #f4f4f4;
 border-bottom: 1px solid black;
 border-left: 1px solid black;
 border-top: 1px solid black;
-
+background: qlineargradient(x1: 1, y1: 0, x2: 0, y2: 0,
+stop: 0 rgb(210, 210, 210),
+stop: 1 #DCDCDC);
 
 }
 
@@ -1220,25 +1228,6 @@ border:none;</string>
       <string>Agregar</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="widget_8" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>780</y>
-      <width>891</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#widget_8{
-
-background: #f4f4f4;
-border-top: 1px solid black;
-
-
-}</string>
-    </property>
    </widget>
   </widget>
  </widget>

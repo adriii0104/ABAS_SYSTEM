@@ -61,7 +61,7 @@ for monitores in monitor:
     height = monitores.height
 
 pw = width * 0.90
-ph = height * 0.80
+ph = height * 0.92
 
 
 

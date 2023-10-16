@@ -2,17 +2,20 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1311</width>
+    <width>1400</width>
     <height>820</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1110</width>
+    <width>1200</width>
     <height>820</height>
    </size>
   </property>
@@ -30,9 +33,15 @@
     <normalon>../IMGS/27.png</normalon>
    </iconset>
   </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
   <property name="styleSheet">
    <string notr="true">
 background-color: rgb(190, 190, 190);</string>
+  </property>
+  <property name="locale">
+   <locale language="Spanish" country="Spain"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">

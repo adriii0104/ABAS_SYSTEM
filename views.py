@@ -94,6 +94,7 @@ class Facturation(QMainWindow):
             uic.loadUi("UI/facturation.ui", self)
             self.setFixedSize(QSize(1200, 790))
             self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             self.times = datetime.now().strftime("%H:%M:%S")
             self.timering.setText(self.times)
             # self.date.setText(datetime.now().strftime("%d/%m/%Y"))
@@ -202,6 +203,7 @@ class Facturation(QMainWindow):
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
+        
 class registersuppliers(QMainWindow):
     def __init__(self):
         try:
@@ -221,10 +223,6 @@ class registersuppliers(QMainWindow):
     def sequencecode(self):
         for number in range(1, 1001):
             yield f"P{number:04}"
-
-
-
-
 
     def close_assets(self):
         self.close()
@@ -311,12 +309,13 @@ class Home(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/home.ui", self)
-            self.setFixedSize(QSize(width, height))
-            self.menubar.setFixedSize(QSize(151, height))
+            self.menubar.setFixedSize(QSize(151, int(ph)))
+            self.setFixedSize(QSize(width, int(ph)))
             self.setWindowTitle("Inicio")
             self.facturationbutton.clicked.connect(self.open_facturation)
             self.inventorybutton.clicked.connect(self.open_inventory)
             self.suppliersbutton.clicked.connect(self.open_suppliers)
+
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
