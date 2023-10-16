@@ -124,7 +124,6 @@ class Facturation(QMainWindow):
                 icon = QIcon('IMGS/35.png')
                 self.status.setIcon(icon)
                 self.status.setIconSize(QSize(12, 12))
-
         except Exception as e:
             QMessageBox.critical(
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
