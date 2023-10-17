@@ -18,7 +18,6 @@ APP_REQUERIMENTS = (
     license
 )
 
-
 USER_SESSION = {}
 
 PYTHON_VERSION = "3.11.5 ABAS"
@@ -29,18 +28,19 @@ with open("JSON/information.json", 'r', encoding="utf-8") as file:
 APP_INFORMATIONS = {
     "info1": informations["info1"],
     "info2": informations["info2"]
-    }
+}
+
 
 def proccess_log(**kwargs):
     with open("JSON/temporary.json", "w", encoding="utf-8") as proccess:
-        print(kwargs)
         json.dump({
-            "user_information": kwargs, "data":{
+            "user_information": kwargs, "data": {
                 "number_of_products": 0,
             }
         }, proccess, indent=4)
     with open("JSON/temporary.json", "r", encoding="utf-8") as proccess:
         loader = json.load(proccess)
+
 
 def check_log():
     if os.path.exists("JSON/temporary.json"):
@@ -54,6 +54,7 @@ def check_log():
     else:
         return False
 
+
 monitor = get_monitors()
 
 for monitores in monitor:
@@ -63,13 +64,21 @@ for monitores in monitor:
 pw = width * 0.90
 ph = height * 0.92
 
-
-
 LAST_WINDOW = {}
+
 
 def hash_pass(**passwd):
     psw = hashlib.sha256(passwd["pass_auth_user_get_input"].encode()).hexdigest()
     return psw
 
 
+def formatt(*args):
+    return "{:,.2f}".format(args[0])
 
+def check_session() -> bool:
+    with open("JSON/temporary.json", "r", encoding="utf-8") as check:
+        checked = json.load(check)
+        if "active" in checked["user_information"]:
+            return True
+        else:
+            return False

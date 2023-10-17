@@ -3,6 +3,7 @@ import requests
 url = "http://127.0.0.1:5000/request_data_abas_system"
 
 def Add_inventory(**kwargs):
+    from SRC.settings import USER_SESSION
     dic = {
         "data":{"quantity": kwargs["quantity"],
             "Name": kwargs["article"],
@@ -18,15 +19,13 @@ def Add_inventory(**kwargs):
         },
         "inventory_id": kwargs["code"],
         "enterprise_id": USER_SESSION["COMPANY_ID"]
-
          }
-
     response = requests.post(url, json=dic, verify=False)
     if response.status_code == 200:
         data = response.json()
     else:
         return False
-
+        
 def add_newsupplier(**kwargs):
     dic = {
         "newsupplier":{
@@ -68,16 +67,14 @@ def data_user_send_post_log(**kwargs):
         else:
             return False
 
-
-
 def search_product(**kwargs):
-    url = "http://127.0.0.1:5000/request_data_abas_system/search"
+    from SRC.settings import USER_SESSION
+    urls = "http://127.0.0.1:5000/request_data_abas_system/search"
 
     data = {"enterprise_id": USER_SESSION["COMPANY_ID"], "inventory_id": kwargs["id_product"]}
 
-    response = requests.post(url, json=data, verify=False)
-
-    if response == 200:
+    response = requests.post(urls, json=data, verify=False)
+    if response.status_code == 200:
         DATA = response.json()
         if DATA["found"]:
             return DATA["data"]

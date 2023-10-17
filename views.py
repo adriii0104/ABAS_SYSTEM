@@ -8,9 +8,9 @@ try:
     import sys
     from SRC.settings import *
     from SRC.data import *
-    from SRC.Prueba import *
     import re
     from datetime import datetime
+    import json
 except Exception as e:
     pass
 
@@ -114,7 +114,8 @@ class Facturation(QMainWindow):
             self.information_1.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info1"]))
             self.information_2.clicked.connect(lambda: self.open_information(APP_INFORMATIONS["info2"]))
 
-            if "LOGUED" not in USER_SESSION:
+            session_ac = check_session()
+            if "LOGUED" not in USER_SESSION and session_ac is False:
                 self.status.setText("Desconectado")
                 icon = QIcon('IMGS/34.png')
                 self.status.setIcon(icon)
@@ -130,14 +131,16 @@ class Facturation(QMainWindow):
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     def search(self):
-        if "LOGUED" in USER_SESSION:
+        session_ac = check_session()
+        if "LOGUED" in USER_SESSION and session_ac:
             id = self.id.text()
             data = search_product(id_product=id)
             if data:
                 self.productname.setText(data["Name"])
                 self.productID.setText(id)
-                self.available.setText(data["Quantity"])
+                self.available.setText(str(data["Quantity"]))
                 self.cd.setText(data["Expiration_date"])
+                self.price.setText(data["Price"])
             else:
                 QMessageBox.information(self, "Error", "El producto no se ha encontrado.")
         else:
@@ -154,7 +157,8 @@ class Facturation(QMainWindow):
 
 
     def connected(self):
-        if "LOGUED" in USER_SESSION:
+        session_ac = check_session()
+        if "LOGUED" in USER_SESSION and session_ac:
             QMessageBox.information(self, "Conectado", "Este dispositivo está conectado al servidor y se puede realizar cualquier actividad.")
         else:
             self.close()
@@ -172,31 +176,119 @@ class Facturation(QMainWindow):
             self.tableWidget_2.removeRow(i)
 
     def Add_Item(self):
+
         next_row = self.tableWidget_2.rowCount()
         Quantity = self.quantity.value()
+        product = self.productname.text()
+        ID_PRODUCT = self.productID.text()
+        PRICE = self.price.text()
+        self.available.text()
+        INPUTS = [product, ID_PRODUCT, PRICE]
 
-        producto_item1 = QTableWidgetItem(f"Producto1")
-        producto_item2 = QTableWidgetItem(f"{next_row + 1}")
-        producto_item3 = QTableWidgetItem(str(Quantity))
-        producto_item4 = QTableWidgetItem(f"Producto4")
-        producto_item5 = QTableWidgetItem(f"Producto5")
-        producto_item6 = QTableWidgetItem(f"Producto6")
-        producto_item7 = QTableWidgetItem(f"Producto7")
-        producto_item8 = QTableWidgetItem(f"Producto8")
-        producto_item9 = QTableWidgetItem(f"Producto9")
+        trying = True
+        exists = False
+
+        for input in INPUTS:
+            if input.isspace() or input == "":
+                QMessageBox.critical(self, "Error", "Primero debes agregar el Articulo.")
+                trying = False
+                break
+
+        if trying is True:
+            if Quantity > int(self.available.text()):
+                QMessageBox.information(self, "Error", "Solo quedan {} disponibles.".format(self.available.text()))
+            elif Quantity == 0:
+                QMessageBox.information(self, "Error", "Debes agregar la cantidad.")
+            else:
+                table = self.tableWidget_2  # Reemplaza con la referencia correcta a tu QTableWidget
+                for row in range(table.rowCount()):
+                    for column in range(table.columnCount()):
+                        item = table.item(row, column)
+                        if item is not None:
+                            value = item.text()
+                            if value == ID_PRODUCT:
+                                exists = True
+                                quantity = self.tableWidget_2.item(int(row), 2).text()
+                                quantity = self.tableWidget_2.item(int(row), 2).text()
+                                quantity = self.tableWidget_2.item(int(row), 2).text()
+                                quantity = self.tableWidget_2.item(int(row), 2).text()
+
+                                totalquantity = int(quantity) + Quantity
+
+                                qnt = QTableWidgetItem(str(totalquantity))
 
 
-        self.tableWidget_2.insertRow(next_row)  # Insertar una nueva fila
-        self.tableWidget_2.setItem(next_row, 0, producto_item1)
-        self.tableWidget_2.setItem(next_row, 1, producto_item2)
-        self.tableWidget_2.setItem(next_row, 2, producto_item3)
-        self.tableWidget_2.setItem(next_row, 3, producto_item4)
-        self.tableWidget_2.setItem(next_row, 4, producto_item5)
-        self.tableWidget_2.setItem(next_row, 5, producto_item6)
-        self.tableWidget_2.setItem(next_row, 6, producto_item7)
-        self.tableWidget_2.setItem(next_row, 7, producto_item8)
 
-        self.quantity.setValue(0)
+                                self.tableWidget_2.setItem(row, 2, qnt)
+                                self.clear_windows_inputs()
+
+                        else:
+                            pass
+                if exists is False:
+                    self.cd.text()
+                    ITBIS = int(Quantity) * float(PRICE) * 0.18
+                    TOTAL = int(Quantity) * float(PRICE) + ITBIS
+                    TOTAL_WITHOUT_ITBIS = int(Quantity) * float(PRICE)
+
+                    ITBIS_FRMT = "{:,.2f}".format(ITBIS)
+                    SUB_TOTAL_FRMT = "{:,.2f}".format(TOTAL_WITHOUT_ITBIS)
+                    TOTAL_FRMT = "{:,.2f}".format(TOTAL)
+
+                    producto_item1 = QTableWidgetItem(product)
+                    producto_item2 = QTableWidgetItem(ID_PRODUCT)
+                    producto_item3 = QTableWidgetItem(str(Quantity))
+                    producto_item4 = QTableWidgetItem(str(PRICE))
+                    producto_item5 = QTableWidgetItem(f"0.00")
+                    producto_item6 = QTableWidgetItem(SUB_TOTAL_FRMT)
+                    producto_item7 = QTableWidgetItem(ITBIS_FRMT)
+                    producto_item8 = QTableWidgetItem(TOTAL_FRMT)
+
+                    self.tableWidget_2.insertRow(next_row)  # Insertar una nueva fila
+                    self.tableWidget_2.setItem(next_row, 0, producto_item1)
+                    self.tableWidget_2.setItem(next_row, 1, producto_item2)
+                    self.tableWidget_2.setItem(next_row, 2, producto_item3)
+                    self.tableWidget_2.setItem(next_row, 3, producto_item4)
+                    self.tableWidget_2.setItem(next_row, 4, producto_item5)
+                    self.tableWidget_2.setItem(next_row, 5, producto_item6)
+                    self.tableWidget_2.setItem(next_row, 6, producto_item7)
+                    self.tableWidget_2.setItem(next_row, 7, producto_item8)
+
+                    self.quantity.setValue(0)
+
+                    # PROCESAR Y CALCULAR
+
+                    # FUNCION DEL SUBTOTAL.
+                    SUB = self.tableWidget_2.item(next_row, 5).text()
+                    PP = re.sub(r'\.\d+', '', SUB)
+                    PP = PP.replace(",", "")
+
+                    to_sum = int(PP)
+
+                    sum_text = self.subtotal_input.text()
+                    print(sum_text)
+                    sum_number = int(re.sub(r'\.\d+', '', sum_text).replace(",", ""))
+
+                    total_sub = to_sum + sum_number
+                    SUB = format(total_sub)
+
+                    self.subtotal_input.setText(SUB)
+
+
+                    # FUNCION PARA EL DESCUENTO.
+                    DESC = self.tableWidget_2.item(next_row, 4).text()
+                    DESC = re.sub(r'\.\d+', '', DESC)
+                    DESC = DESC.replace(",", "")
+
+                    DESC_TO_SUM = int(DESC)
+
+                    DESC_SUM = float(self.discount.text())
+
+                    TOTAL_DESC = DESC_TO_SUM + DESC_SUM
+                    DESC_FORMAT = format(TOTAL_DESC)
+
+                    self.discount.setText(DESC_FORMAT)
+
+                    self.clear_windows_inputs()
 
 
     def open_information(self, message):
@@ -396,13 +488,25 @@ class Alter_log(QMainWindow):
     def login(self):
         passwd = self.input_password.text()
         password = hash_pass(pass_auth_user_get_input=passwd)
+
         with open("JSON/temporary.json", "r", encoding="utf-8") as check:
             checked = json.load(check)
             user = checked["user_information"]["user"]
+
+        
+        if self.setlogin.isChecked():
+            with open("JSON/temporary.json", "r", encoding="utf-8") as to_read:
+                check_information = json.load(to_read)
+
+                check_information["user_information"]["active"] = True
+
+            with open("JSON/temporary.json", "w", encoding="utf-8") as to_write:
+                json.dump(checked, to_write, indent=4)
+                
+            
         response = data_user_send_post_log(user_log_data_send_input=user, pass_log_data_send_input=password)
         if response:
             self.close()
-            QMessageBox.information(self, "Ya te has conectado.", "Ya tienes acceso.")
             if LAST_WINDOW["last"] == "Facturation":
                 self.last = Facturation()
                 self.last.show()
