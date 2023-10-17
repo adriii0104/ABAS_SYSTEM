@@ -199,7 +199,7 @@ border: 1px solid gray;
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Telefono&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="directioinput">
+    <widget class="QLineEdit" name="directioninput">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -264,7 +264,7 @@ border: 1px solid gray;
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;RNC/Cédula *&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="acceptbutton">
+    <widget class="QPushButton" name="savebutton">
      <property name="geometry">
       <rect>
        <x>290</x>
