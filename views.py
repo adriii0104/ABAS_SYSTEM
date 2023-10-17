@@ -8,6 +8,7 @@ try:
     import sys
     from SRC.settings import *
     from SRC.data import *
+    from SRC.Prueba import *
     import re
     from datetime import datetime
 except Exception as e:
@@ -210,7 +211,6 @@ class Facturation(QMainWindow):
                 self, "Error", "Error al iniciar la aplicación: " + str(e))
 
     
-        
 class registersuppliers(QMainWindow):
     def __init__(self):
         try:
@@ -222,6 +222,7 @@ class registersuppliers(QMainWindow):
             self.codeinput.setText(next(self.sequencecode()))
             self.codeinput.setReadOnly(True)
             self.cancelbutton.clicked.connect(self.close_assets)
+            self.savebutton.clicked.connect(self.add_supplier)
 
         except Exception as e:
             QMessageBox.critical(
@@ -234,6 +235,33 @@ class registersuppliers(QMainWindow):
     def close_assets(self):
         self.close()
 
+    def add_supplier(self):
+        Code = self.codeinput.text()
+        Name = self.nameinput.text()
+        Rnc = self.rncinput.text()
+        Type = self.typebox.currentText()
+        Direction = self.directioninput.text()
+        Phone = self.phoneinput.text()
+        Email = self.emailinput.text()
+        Website = self.websiteinput.text()
+
+        add_newsupplier(code=Code, name=Name, rnc=Rnc, type=Type, direction=Direction, 
+                        phone=Phone, email=Email, website=Website)
+
+
+        self.nameinput.setText("")
+        self.rncinput.setText("")
+        self.typebox.itemText(1)
+        self.directioninput.setText("")
+        self.phoneinput.setText("")
+        self.emailinput.setText("")
+        self.websiteinput.setText("")
+
+
+
+
+
+
 
 class Module_products_un(QMainWindow):
     def __init__(self):
@@ -241,7 +269,6 @@ class Module_products_un(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             super().__init__()
             uic.loadUi("UI/modulo_producto_unidad.ui", self)
-
             self.setFixedSize(QSize(870, 1200))
             self.setWindowTitle("Inventario")
             date = QDate.currentDate()

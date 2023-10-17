@@ -17,14 +17,31 @@ def Add_inventory(**kwargs):
 
         },
         "inventory_id": kwargs["code"],
-        "enterprise_id": "0001"
+        "enterprise_id": USER_SESSION["COMPANY_ID"]
 
          }
+
     response = requests.post(url, json=dic, verify=False)
     if response.status_code == 200:
         data = response.json()
     else:
         return False
+
+def add_newsupplier(**kwargs):
+    dic = {
+        "newsupplier":{
+            "Name": kwargs["name"],
+            "Rnc": kwargs["rnc"],
+            "Type": kwargs["type"],
+            "Direction": kwargs["direction"],
+            "Phone": kwargs["phone"],
+            "Email": kwargs["email"],
+            "Website": kwargs["website"],
+        },
+        "supplier_id": kwargs["code"],
+        "enterprise_id": USER_SESSION["COMPANY_ID"]
+
+         }
 
 
 def data_user_send_post_log(**kwargs):
