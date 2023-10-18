@@ -2,6 +2,7 @@ import json
 import os
 from screeninfo import get_monitors
 import hashlib
+import time
 
 with open('JSON/settings.json', 'r') as f:
     settings = json.load(f)
@@ -43,15 +44,22 @@ def proccess_log(**kwargs):
 
 
 def check_log():
-    if os.path.exists("JSON/temporary.json"):
-        with open("JSON/temporary.json", "r", encoding="utf-8") as check:
-            checked = json.load(check)
-            if not checked["user_information"]["logued"]:
-                return False
-            else:
-                USER_SESSION["COMPANY_NAME"] = checked["user_information"]["enterprise_name"]
-                return True
-    else:
+    try:
+        if os.path.exists("JSON/temporary.json"):
+            with open("JSON/temporary.json", "r", encoding="utf-8") as check:
+                checked = json.load(check)
+                if "user_information" in checked:
+                    if "logued" not in checked["user_information"]:
+                        return False
+                    else:
+                        USER_SESSION["COMPANY_NAME"] = checked["user_information"]["enterprise_name"]
+                        return True
+                else:
+                    return False
+        else:
+            return False
+    except json.decoder.JSONDecodeError as e:
+        print(f"Error al cargar el archivo JSON: {e}")
         return False
 
 
@@ -78,7 +86,10 @@ def formatt(*args):
 def check_session() -> bool:
     with open("JSON/temporary.json", "r", encoding="utf-8") as check:
         checked = json.load(check)
-        if "active" in checked["user_information"]:
+        if "active" in checked:
+            USER_SESSION["COMPANY_NAME"] = checked["user_information"]["enterprise_name"]
+            USER_SESSION["COMPANY_ID"] = checked["user_information"]["id"]
             return True
         else:
             return False
+
