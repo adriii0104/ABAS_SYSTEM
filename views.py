@@ -346,7 +346,7 @@ class registersuppliers(QMainWindow):
 
     def sequencecode(self):
         for number in range(1, 1001):
-            yield f"P{number:04}"
+            yield f"F-01{number:10}"
 
     def close_assets(self):
         self.close()

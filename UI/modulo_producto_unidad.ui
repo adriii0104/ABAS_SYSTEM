@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>890</width>
-    <height>876</height>
+    <height>868</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,6 +19,13 @@
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+
+	font: 25 10pt &quot;Bahnschrift Light&quot;;
+
+} </string>
+   </property>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
@@ -118,6 +125,9 @@ QComboBox::drop-down {
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -163,6 +173,9 @@ color: black;
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -199,6 +212,9 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -208,9 +224,9 @@ background: white;</string>
       <widget class="QLabel" name="label_28">
        <property name="geometry">
         <rect>
-         <x>310</x>
+         <x>280</x>
          <y>550</y>
-         <width>91</width>
+         <width>141</width>
          <height>20</height>
         </rect>
        </property>
@@ -218,10 +234,13 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>Fecha Compra</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Fecha Compra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_29">
@@ -229,7 +248,7 @@ background: white;</string>
         <rect>
          <x>510</x>
          <y>100</y>
-         <width>71</width>
+         <width>81</width>
          <height>31</height>
         </rect>
        </property>
@@ -237,6 +256,9 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -246,9 +268,9 @@ background: white;</string>
       <widget class="QLabel" name="label_30">
        <property name="geometry">
         <rect>
-         <x>480</x>
+         <x>460</x>
          <y>550</y>
-         <width>101</width>
+         <width>141</width>
          <height>20</height>
         </rect>
        </property>
@@ -256,10 +278,13 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>Fecha Caducidad</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Fecha Caducidad&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QPushButton" name="add_button">
@@ -304,7 +329,7 @@ background: #BABABA;
         <rect>
          <x>620</x>
          <y>560</y>
-         <width>111</width>
+         <width>131</width>
          <height>20</height>
         </rect>
        </property>
@@ -312,6 +337,9 @@ background: #BABABA;
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -460,15 +488,16 @@ color: black;
         <rect>
          <x>20</x>
          <y>20</y>
-         <width>131</width>
+         <width>141</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
+         <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
-         <weight>50</weight>
+         <weight>3</weight>
+         <italic>false</italic>
          <bold>false</bold>
         </font>
        </property>
@@ -493,9 +522,9 @@ background: white;</string>
       <widget class="QLabel" name="label_33">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>280</x>
          <y>470</y>
-         <width>131</width>
+         <width>141</width>
          <height>21</height>
         </rect>
        </property>
@@ -503,6 +532,9 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -541,6 +573,9 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -560,6 +595,9 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -579,6 +617,9 @@ background: white;</string>
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -614,9 +655,9 @@ padding-bottom: 70px;
       <widget class="QLabel" name="label_38">
        <property name="geometry">
         <rect>
-         <x>480</x>
+         <x>460</x>
          <y>470</y>
-         <width>111</width>
+         <width>141</width>
          <height>21</height>
         </rect>
        </property>
@@ -624,10 +665,13 @@ padding-bottom: 70px;
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>10</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>Costo por unidad *</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Costo por unidad *&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_3">
@@ -635,15 +679,21 @@ padding-bottom: 70px;
         <rect>
          <x>150</x>
          <y>320</y>
-         <width>91</width>
-         <height>16</height>
+         <width>101</width>
+         <height>20</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Bahnschrift Light</family>
          <pointsize>7</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 25 7pt &quot;Bahnschrift Light&quot;;</string>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;(Max 70 caracteres)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -653,8 +703,8 @@ padding-bottom: 70px;
        <property name="geometry">
         <rect>
          <x>590</x>
-         <y>100</y>
-         <width>16</width>
+         <y>101</y>
+         <width>21</width>
          <height>31</height>
         </rect>
        </property>
@@ -843,8 +893,11 @@ color: black;
       </property>
       <property name="font">
        <font>
-        <family>Bahnschrift SemiBold</family>
+        <family>Bahnschrift Light</family>
         <pointsize>10</pointsize>
+        <weight>3</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="text">
@@ -1002,8 +1055,11 @@ color: black;
       </property>
       <property name="font">
        <font>
-        <family>Bahnschrift SemiBold</family>
+        <family>Bahnschrift Light</family>
         <pointsize>10</pointsize>
+        <weight>3</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="text">

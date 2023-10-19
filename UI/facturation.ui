@@ -56,9 +56,14 @@ background: rgb(170, 170, 170);
     <property name="styleSheet">
      <string notr="true">#widget_2{
 border-bottom: 1px solid black;
-background: white;
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+stop: 0 rgb(190, 190, 190),
+stop: 1 #DCDCDC);
 
-}</string>
+}
+
+
+</string>
     </property>
     <widget class="QLineEdit" name="fecha">
      <property name="geometry">
@@ -153,9 +158,9 @@ background: white;
     <widget class="QSpinBox" name="quantity">
      <property name="geometry">
       <rect>
-       <x>540</x>
+       <x>520</x>
        <y>160</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -163,9 +168,9 @@ background: white;
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>540</x>
+       <x>520</x>
        <y>130</y>
-       <width>91</width>
+       <width>121</width>
        <height>20</height>
       </rect>
      </property>
@@ -250,8 +255,8 @@ background: white;
     <widget class="QPushButton" name="clearr">
      <property name="geometry">
       <rect>
-       <x>980</x>
-       <y>40</y>
+       <x>730</x>
+       <y>20</y>
        <width>111</width>
        <height>41</height>
       </rect>
@@ -277,8 +282,8 @@ background: white;
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>740</x>
-       <y>40</y>
+       <x>470</x>
+       <y>20</y>
        <width>111</width>
        <height>41</height>
       </rect>
@@ -304,8 +309,8 @@ background: white;
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>860</x>
-       <y>40</y>
+       <x>600</x>
+       <y>20</y>
        <width>111</width>
        <height>41</height>
       </rect>
@@ -526,6 +531,88 @@ border: none;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QComboBox" name="comboBox_3">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>160</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Seleccionar</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Factura para Consumidor Final</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Factura para Credito Fiscal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Notas de Debito</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Notas de Credito</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Factura para Proveedor Informal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Factura Gubernamental</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Gastos Menores</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Factura para Exportaciones</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Pagos al exterior</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>130</y>
+       <width>241</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">margin-left: 4px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tipo de comprobante fiscal (NCF)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
@@ -538,7 +625,9 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">#widget_4{
-background: white;
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+stop: 0 rgb(190, 190, 190),
+stop: 1 #DCDCDC);
 border-left: 1px solid black;
 
 }</string>
@@ -1109,9 +1198,9 @@ background-color: white;</string>
    <widget class="QWidget" name="widget_7" native="true">
     <property name="geometry">
      <rect>
-      <x>930</x>
+      <x>940</x>
       <y>220</y>
-      <width>391</width>
+      <width>381</width>
       <height>431</height>
      </rect>
     </property>
@@ -1120,8 +1209,9 @@ background-color: white;</string>
 border-bottom: 1px solid black;
 border-left: 1px solid black;
 border-top: 1px solid black;
-background: white;
-
+background: qlineargradient(x1: 1, y1: 0, x2: 0, y2: 0,
+stop: 0 rgb(190, 190, 190),
+stop: 1 #DCDCDC);
 }
 
 </string>
