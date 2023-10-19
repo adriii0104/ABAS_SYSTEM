@@ -102,7 +102,7 @@ class Facturation(QMainWindow):
             # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             uic.loadUi("UI/facturation.ui", self)
 
-            self.setFixedSize(QSize(1438, height - 140))
+            self.setFixedSize(QSize(1438, 859))
 
             self.setWindowTitle(APP_REQUERIMENTS[1])
             # self.date.setText(datetime.now().strftime("%d/%m/%Y"))
