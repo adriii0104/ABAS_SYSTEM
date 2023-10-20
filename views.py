@@ -25,7 +25,6 @@ class Main(QMainWindow):
         try:
             super().__init__()
             uic.loadUi("UI/mainwindow.ui", self)
-            self.setWindowTitle(APP_REQUERIMENTS[1])
             self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
             QTimer.singleShot(2222, self.open_windows)
         except Exception as e:
@@ -58,7 +57,7 @@ class Login(QMainWindow):
             # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             uic.loadUi("UI/login.ui", self)
             self.setFixedSize(QSize(600, 510))
-            self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.setWindowTitle(USER_SESSION["COMPANY_NAME"] + " - (Iniciar Sesión)" if "COMPANY_NAME" in USER_SESSION else "Login")
             self.version.setText(APP_REQUERIMENTS[0])
             self.Togglepassword.clicked.connect(self.toggle_echo_mode)
             self.Loginbutton.clicked.connect(self.login)
@@ -104,7 +103,7 @@ class Facturation(QMainWindow):
 
             self.setFixedSize(QSize(1438, 859))
 
-            self.setWindowTitle(APP_REQUERIMENTS[1])
+            self.setWindowTitle(USER_SESSION["COMPANY_NAME"] + " - (Facturación)")
             # self.date.setText(datetime.now().strftime("%d/%m/%Y"))
             self.fecha.setText(datetime.now().strftime("%d/%m/%Y"))
             self.add.clicked.connect(self.Add_Item)
@@ -131,7 +130,7 @@ class Facturation(QMainWindow):
             icon = QIcon('IMGS/34.png')
             self.status.setIcon(icon)
             self.status.setIconSize(QSize(12, 12))
-            self.status.clicked.connect(self.cnn)
+            self.status.clicked.connect(self.cnn if chk is False else self.opening_loguer)
         else:
             self.status.setText("Conectado")
             icon = QIcon('IMGS/35.png')
@@ -158,15 +157,19 @@ class Facturation(QMainWindow):
                 else:
                     messagebox.showinfo(
                         "Error.", "Para completar esta actividad debe entrar en el servidor.")
-                    self.close()
-                    LAST_WINDOW["last"] = "Facturation"
-                    self.altern = Alter_log()
-                    self.altern.show()
+                    self.opening_loguer
             else:
                 self.cnn()
         except Exception:
-            messagebox.showinfo("Ha ocurrido un error inesperado.",
+            messagebox.showinfo("Error inesperado.",
                                 "Ha ocurrido un error inesperado.")
+            
+
+    def opening_loguer(self):
+        self.close()
+        LAST_WINDOW["last"] = "Facturation"
+        self.altern = Alter_log()
+        self.altern.show()
 
     def close_facturation(self):
         self.close()
@@ -428,7 +431,7 @@ class Module_products_un(QMainWindow):
             chk = check_connection()
             if chk:
                 uic.loadUi("UI/modulo_producto_unidad.ui", self)
-                self.setFixedSize(QSize(870, 1200))
+                self.setFixedSize(QSize(870, 800))
                 self.setWindowTitle("Inventario")
                 date = QDate.currentDate()
                 self.date_expired.setDate(date)
@@ -515,7 +518,7 @@ class Home(QMainWindow):
     def open_inventory(self):
         session_ac = check_session()
         if "LOGUED" in USER_SESSION or session_ac:
-            self.inventory_window = Module_products_un()
+            self.inventory_window = Inventory()
             self.inventory_window.move(155, 35)
             self.inventory_window.show()
         else:
@@ -567,9 +570,35 @@ class Alter_log(QMainWindow):
                     self.last = Facturation()
                     self.last.show()
                 elif LAST_WINDOW["last"] == "Inventory":
-                    self.last = Module_products_un()
+                    self.last = Inventory()
                     self.last.show()
                 if self.setlogin.isChecked():
                     reminder_session()
             else:
                 messagebox.showinfo("Error", "Credenciales invalidas.")
+
+
+
+class Inventory(QMainWindow):
+    def __init__(self):
+        try:
+            super().__init__()
+
+            uic.loadUi("UI/inventory.ui", self)
+
+            self.setFixedSize(QSize(1231, 821))
+
+            self.setWindowTitle(USER_SESSION["COMPANY_NAME"] + " - (Inventario)")
+
+            self.addnew.clicked.connect(self.openingadd)
+        except Exception as e:
+            messagebox.showerror("Error","Ha ocurrido un error inesperado.")
+
+
+    def openingadd(self):
+        try:
+            self.close()
+            self.addinventory = Module_products_un()
+            self.addinventory.show()
+        except Exception as e:
+            messagebox.showwarning("Error", "Ha ocurrido un error inesperado" + (str(e)))
