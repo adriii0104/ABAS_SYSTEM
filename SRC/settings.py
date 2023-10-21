@@ -53,6 +53,7 @@ def check_log():
                         return False
                     else:
                         USER_SESSION["COMPANY_NAME"] = checked["user_information"]["enterprise_name"]
+                        USER_SESSION["COMPANY_ID"] = checked["user_information"]["id"]
                         return True
                 else:
                     return False

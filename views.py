@@ -472,7 +472,7 @@ class Module_products_un(QMainWindow):
             Category = self.category.currentText()
             Brand = self.brand.text()
             Code = self.code.text()
-            Add_inventory(quantity=Quantity, article=Article, code=Code, unit_price=Unit_price,
+            response = Add_inventory(quantity=Quantity, article=Article, code=Code, unit_price=Unit_price,
                           active=Avaliable, itbis=Itbis, description=Description,
                           date_expired=Date_expired, category=Category, brand=Brand)
             self.article.setText("")
@@ -485,6 +485,8 @@ class Module_products_un(QMainWindow):
             self.date_expired.setDate(date)
             self.category.itemText(1)
             self.brand.setText("")
+            if response:
+                messagebox
 
     def close_assets(self):
         self.close()
@@ -590,9 +592,52 @@ class Inventory(QMainWindow):
 
             self.setWindowTitle(USER_SESSION["COMPANY_NAME"] + " - (Inventario)")
 
+            response = inventory()
+
+            if response is not None:
+                for index, items in response.items():
+                    next_row = self.inventory.rowCount()
+
+
+                    producto_item1 = QTableWidgetItem(str(index))
+                    producto_item2 = QTableWidgetItem(items["Name"])
+                    producto_item3 = QTableWidgetItem(items["Description"])
+                    producto_item4 = QTableWidgetItem(str(items["Price"]))
+                    producto_item5 = QTableWidgetItem(str(items["Quantity"]))
+                    producto_item6 = QTableWidgetItem(str(items["Avaliable"]))
+                    producto_item7 = QTableWidgetItem(items["Enterprise_sell"])
+
+
+                    self.inventory.setColumnWidth(0, 140)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(1, 140)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(2, 280)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(3, 70)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(4, 70)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(5, 120)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(6, 140)  # Ajusta el ancho de la columna 1
+
+                    self.inventory.insertRow(
+                        next_row)  # Insertar una nueva fila
+                    self.inventory.setItem(
+                        next_row, 0, producto_item1)
+                    self.inventory.setItem(
+                        next_row, 1, producto_item2)
+                    self.inventory.setItem(
+                        next_row, 2, producto_item3)
+                    self.inventory.setItem(
+                        next_row, 3, producto_item4)
+                    self.inventory.setItem(
+                        next_row, 4, producto_item5)
+                    self.inventory.setItem(
+                        next_row, 5, producto_item6)
+                    self.inventory.setItem(
+                        next_row, 6, producto_item7)
+
+
+
             self.addnew.clicked.connect(self.openingadd)
         except Exception as e:
-            messagebox.showerror("Error","Ha ocurrido un error inesperado.")
+            messagebox.showerror("Error","Ha ocurrido un error inesperado." + str(e))
 
 
     def openingadd(self):

@@ -26,6 +26,7 @@ def Add_inventory(**kwargs):
         response = requests.post(url, json=dic, verify=False)
         if response.status_code == 200:
             data = response.json()
+            messagebox.showinfo(data["title"], data["message"])
         else:
             return False
     except requests.ConnectionError:
@@ -91,3 +92,23 @@ def search_product(**kwargs):
                 return False
     except requests.ConnectionError:
         messagebox.showinfo("Ha ocurrido un error inesperado.", "Para realizar esta accion debes estar conectado a internet.")
+
+
+
+def inventory():
+    url = "http://127.0.0.1:5000/data_request_inventory/ABAS/USER"
+
+    data_url = f"{url}/{USER_SESSION['COMPANY_ID']}"
+
+    response = requests.get(data_url)
+
+    if response.status_code == 200:
+        DATA = response.json()
+        if DATA["Error"] is True:
+            messagebox.showinfo("Mensaje.", "Aún no hay articulosa agregados.")
+            return None
+        else:
+            return DATA["data"]
+    else:
+        messagebox.showinfo("Error.", "Ha ocurrido un error.")
+
