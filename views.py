@@ -375,6 +375,24 @@ class Facturation(QMainWindow):
         QMessageBox.information(self, "Información", message)
 
 
+
+class Suppliers(QMainWindow):
+    def __init__(self):
+        try:
+            super().__init__()
+                # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            uic.loadUi("UI/suppliers.ui", self)
+            self.setFixedSize(QSize(920, 735))
+            self.setWindowTitle("Suplidores")
+
+        except Exception as e:
+            messagebox.showinfo("Ha ocurrido un error inesperado.",
+                                "Ha ocurrido un error inesperado" + str(e))
+
+
+
+
+
 class registersuppliers(QMainWindow):
     def __init__(self):
         try:
@@ -529,7 +547,7 @@ class Home(QMainWindow):
             self.altern.show()
 
     def open_suppliers(self):
-        self.suppliers_window = registersuppliers()
+        self.suppliers_window = Suppliers()
         self.suppliers_window.move(155, 35)
         self.suppliers_window.show()
 
@@ -605,7 +623,8 @@ class Inventory(QMainWindow):
                     producto_item4 = QTableWidgetItem(str(items["Price"]))
                     producto_item5 = QTableWidgetItem(str(items["Quantity"]))
                     producto_item6 = QTableWidgetItem(str(items["Avaliable"]))
-                    producto_item7 = QTableWidgetItem(items["Enterprise_sell"])
+                    producto_item7 = QTableWidgetItem(str(items["Category"]))
+                    producto_item8 = QTableWidgetItem(items["Enterprise_sell"])
 
 
                     self.inventory.setColumnWidth(0, 140)  # Ajusta el ancho de la columna 1
@@ -615,6 +634,7 @@ class Inventory(QMainWindow):
                     self.inventory.setColumnWidth(4, 70)  # Ajusta el ancho de la columna 1
                     self.inventory.setColumnWidth(5, 120)  # Ajusta el ancho de la columna 1
                     self.inventory.setColumnWidth(6, 140)  # Ajusta el ancho de la columna 1
+                    self.inventory.setColumnWidth(7, 140)  # Ajusta el ancho de la columna 1
 
                     self.inventory.insertRow(
                         next_row)  # Insertar una nueva fila
@@ -632,6 +652,8 @@ class Inventory(QMainWindow):
                         next_row, 5, producto_item6)
                     self.inventory.setItem(
                         next_row, 6, producto_item7)
+                    self.inventory.setItem(
+                        next_row, 7, producto_item8)
 
 
 
