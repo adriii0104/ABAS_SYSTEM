@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>920</width>
-    <height>735</height>
+    <width>1018</width>
+    <height>730</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -67,10 +67,13 @@ background: #f4f4f4;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>190</y>
-      <width>921</width>
-      <height>561</height>
+      <y>130</y>
+      <width>1021</width>
+      <height>621</height>
      </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 25 10pt &quot;Bahnschrift Light&quot;;</string>
@@ -120,6 +123,11 @@ background: #f4f4f4;
     </column>
     <column>
      <property name="text">
+      <string>New Column</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
       <string>Telefono</string>
      </property>
     </column>
@@ -128,19 +136,14 @@ background: #f4f4f4;
       <string>Direccion</string>
      </property>
     </column>
-    <column>
-     <property name="text">
-      <string>Email</string>
-     </property>
-    </column>
    </widget>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>30</y>
-      <width>921</width>
-      <height>161</height>
+      <width>1021</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -159,9 +162,9 @@ background: rgb(170, 170, 170);
     <widget class="QLineEdit" name="searchinput">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>110</y>
-       <width>271</width>
+       <x>390</x>
+       <y>20</y>
+       <width>311</width>
        <height>31</height>
       </rect>
      </property>
@@ -171,18 +174,21 @@ background: rgb(170, 170, 170);
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
      <property name="styleSheet">
       <string notr="true">border:1px solid #C0C0C0 ;</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QPushButton" name="searchbuttot">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>110</y>
+       <x>710</x>
+       <y>20</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -200,71 +206,10 @@ background: transparent;</string>
        <normalon>../IMGS/13.png</normalon>../../.designer/IMGS/13.png</iconset>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>110</y>
-       <width>161</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bahnschrift Light</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <item>
-      <property name="text">
-       <string>Filtrar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normalon>../IMGS/41.png</normalon>
-       </iconset>
-      </property>
-     </item>
-    </widget>
-    <widget class="QPushButton" name="exportsuppliers">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>110</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bahnschrift Light</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="text">
-      <string>Exportar</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../IMGS/40.png</normaloff>../IMGS/40.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>19</width>
-       <height>19</height>
-      </size>
-     </property>
-    </widget>
     <widget class="QFrame" name="New">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>10</y>
        <width>91</width>
        <height>81</height>
@@ -342,7 +287,7 @@ border: None;</string>
     <widget class="QFrame" name="delete_2">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>190</x>
        <y>10</y>
        <width>91</width>
        <height>81</height>
@@ -420,7 +365,7 @@ border: None;</string>
     <widget class="QFrame" name="edit">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>100</x>
        <y>10</y>
        <width>91</width>
        <height>81</height>
@@ -458,6 +403,113 @@ border: None;</string>
      <widget class="QLabel" name="editicon">
       <property name="geometry">
        <rect>
+        <x>28</x>
+        <y>10</y>
+        <width>40</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../IMGS/45.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="editbutton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>91</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border: None;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>60</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <item>
+      <property name="text">
+       <string>Filtrar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>../IMGS/41.png</normalon>
+       </iconset>
+      </property>
+     </item>
+    </widget>
+    <widget class="QFrame" name="delete_3">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>91</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="Borrar_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Exportar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deleteicon_2">
+      <property name="geometry">
+       <rect>
         <x>25</x>
         <y>10</y>
         <width>40</width>
@@ -471,13 +523,13 @@ border: None;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../IMGS/20.png</pixmap>
+       <pixmap>../IMGS/40.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="editbutton">
+     <widget class="QPushButton" name="deletebutton_2">
       <property name="geometry">
        <rect>
         <x>0</x>

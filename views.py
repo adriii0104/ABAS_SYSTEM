@@ -382,8 +382,17 @@ class Suppliers(QMainWindow):
             super().__init__()
                 # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             uic.loadUi("UI/suppliers.ui", self)
-            self.setFixedSize(QSize(920, 735))
+            self.setFixedSize(QSize(1020, 730))
             self.setWindowTitle("Suplidores")
+
+            self.suppliers.setColumnWidth(0, 70)
+            self.suppliers.setColumnWidth(1, 200)
+            self.suppliers.setColumnWidth(2, 160)
+            self.suppliers.setColumnWidth(3, 140)
+            self.suppliers.setColumnWidth(4, 140)
+            self.suppliers.setColumnWidth(5, 160)
+            self.suppliers.setColumnWidth(6, 250)
+
 
         except Exception as e:
             messagebox.showinfo("Ha ocurrido un error inesperado.",
