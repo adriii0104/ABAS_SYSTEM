@@ -343,7 +343,7 @@ border: None;</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="clientbutton">
+     <widget class="QPushButton" name="clientsbutton">
       <property name="geometry">
        <rect>
         <x>0</x>

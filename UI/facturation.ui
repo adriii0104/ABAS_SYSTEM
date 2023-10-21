@@ -194,7 +194,15 @@ background-color: white;</string>
         <property name="styleSheet">
          <string notr="true">#widget_2{
 border-bottom: 1px solid black;
-background: #f4f4f4;
+background: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+stop: 0 rgb(190, 190, 190),
+stop: 1 #DCDCDC);
+
+
+}
+
+QPushButton::hover {
+background: rgb(170, 170, 170);
 
 }
 
@@ -591,10 +599,10 @@ border:none;</string>
         <widget class="QPushButton" name="pushButton_6">
          <property name="geometry">
           <rect>
-           <x>150</x>
-           <y>20</y>
-           <width>161</width>
-           <height>31</height>
+           <x>140</x>
+           <y>10</y>
+           <width>171</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
@@ -609,7 +617,7 @@ border:none;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border: none;
-border-right: 1px solid #E0E0E0;</string>
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
           <string>Guardar</string>
@@ -628,10 +636,10 @@ border-right: 1px solid #E0E0E0;</string>
         <widget class="QPushButton" name="pushButton_7">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>20</y>
-           <width>131</width>
-           <height>31</height>
+           <x>0</x>
+           <y>10</y>
+           <width>141</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
@@ -646,7 +654,7 @@ border-right: 1px solid #E0E0E0;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border: none;
-border-right: 1px solid #E0E0E0;</string>
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
           <string>Imprimir</string>
@@ -665,10 +673,10 @@ border-right: 1px solid #E0E0E0;</string>
         <widget class="QPushButton" name="pushButton_8">
          <property name="geometry">
           <rect>
-           <x>470</x>
-           <y>20</y>
-           <width>211</width>
-           <height>31</height>
+           <x>460</x>
+           <y>10</y>
+           <width>221</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
@@ -683,7 +691,7 @@ border-right: 1px solid #E0E0E0;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border: none;
-border-right: 1px solid #E0E0E0;</string>
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
           <string>Enviar factura por correo</string>
@@ -702,10 +710,10 @@ border-right: 1px solid #E0E0E0;</string>
         <widget class="QPushButton" name="clearr">
          <property name="geometry">
           <rect>
-           <x>320</x>
-           <y>20</y>
-           <width>141</width>
-           <height>31</height>
+           <x>310</x>
+           <y>10</y>
+           <width>151</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
@@ -720,7 +728,7 @@ border-right: 1px solid #E0E0E0;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border: none;
-border-right: 1px solid #E0E0E0;</string>
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
           <string>Limpiar</string>
@@ -765,10 +773,10 @@ border-right: 1px solid #E0E0E0;</string>
         <widget class="QPushButton" name="pushButton_9">
          <property name="geometry">
           <rect>
-           <x>690</x>
-           <y>20</y>
-           <width>211</width>
-           <height>31</height>
+           <x>680</x>
+           <y>10</y>
+           <width>221</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
@@ -783,7 +791,7 @@ border-right: 1px solid #E0E0E0;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border: none;
-border-right: 1px solid #E0E0E0;</string>
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
           <string>Trasladar contenido a Excel</string>
@@ -803,9 +811,9 @@ border-right: 1px solid #E0E0E0;</string>
          <property name="geometry">
           <rect>
            <x>900</x>
-           <y>20</y>
-           <width>231</width>
-           <height>31</height>
+           <y>10</y>
+           <width>161</width>
+           <height>41</height>
           </rect>
          </property>
          <property name="font">
@@ -820,7 +828,7 @@ border-right: 1px solid #E0E0E0;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border: none;
-border-right: 1px solid #E0E0E0;</string>
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
           <string>Reembolsar</string>
