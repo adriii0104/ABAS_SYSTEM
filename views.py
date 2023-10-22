@@ -68,6 +68,7 @@ class Login(QMainWindow):
             if chk:
                 user = self.inputuser.text()
                 passwd = self.passwordinput.text()
+                user.lower()
 
                 password = hash_pass(pass_auth_user_get_input=passwd)
                 response = data_user_send_post_log(
@@ -101,7 +102,7 @@ class Facturation(QMainWindow):
             # Aqui se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
             uic.loadUi("UI/facturation.ui", self)
 
-            self.setFixedSize(QSize(1438, 859))
+            self.setFixedSize(QSize(1438, 910))
 
             self.setWindowTitle(USER_SESSION["COMPANY_NAME"] + " - (Facturación)")
             # self.date.setText(datetime.now().strftime("%d/%m/%Y"))

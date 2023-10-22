@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1438</width>
-    <height>859</height>
+    <width>1440</width>
+    <height>910</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -201,19 +201,14 @@ stop: 1 #DCDCDC);
 
 }
 
-QPushButton::hover {
-background: rgb(170, 170, 170);
-
-}
-
 
 </string>
         </property>
         <widget class="QLineEdit" name="fecha">
          <property name="geometry">
           <rect>
-           <x>160</x>
-           <y>160</y>
+           <x>100</x>
+           <y>210</y>
            <width>141</width>
            <height>31</height>
           </rect>
@@ -242,10 +237,10 @@ background: rgb(170, 170, 170);
         <widget class="QLabel" name="label_4">
          <property name="geometry">
           <rect>
-           <x>160</x>
-           <y>130</y>
-           <width>131</width>
-           <height>20</height>
+           <x>100</x>
+           <y>180</y>
+           <width>141</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="font">
@@ -265,10 +260,10 @@ border:none;</string>
         <widget class="QLabel" name="label">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>130</y>
-           <width>111</width>
-           <height>20</height>
+           <x>110</x>
+           <y>100</y>
+           <width>131</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="font">
@@ -287,8 +282,8 @@ border:none;</string>
         <widget class="QComboBox" name="comboBox">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>160</y>
+           <x>120</x>
+           <y>130</y>
            <width>111</width>
            <height>31</height>
           </rect>
@@ -303,11 +298,6 @@ border:none;</string>
          </property>
          <item>
           <property name="text">
-           <string>Selecciona</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
            <string>1- Crédito</string>
           </property>
          </item>
@@ -316,7 +306,7 @@ border:none;</string>
          <property name="geometry">
           <rect>
            <x>970</x>
-           <y>200</y>
+           <y>210</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -328,10 +318,10 @@ border:none;</string>
         <widget class="QLabel" name="label_10">
          <property name="geometry">
           <rect>
-           <x>980</x>
-           <y>170</y>
-           <width>91</width>
-           <height>20</height>
+           <x>970</x>
+           <y>190</y>
+           <width>101</width>
+           <height>21</height>
           </rect>
          </property>
          <property name="font">
@@ -351,10 +341,10 @@ border:none;</string>
         <widget class="QLabel" name="label_7">
          <property name="geometry">
           <rect>
-           <x>320</x>
-           <y>130</y>
-           <width>161</width>
-           <height>20</height>
+           <x>400</x>
+           <y>100</y>
+           <width>171</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="font">
@@ -374,8 +364,8 @@ border:none;</string>
         <widget class="QComboBox" name="comboBox_2">
          <property name="geometry">
           <rect>
-           <x>320</x>
-           <y>160</y>
+           <x>400</x>
+           <y>130</y>
            <width>171</width>
            <height>31</height>
           </rect>
@@ -388,11 +378,6 @@ border:none;</string>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
-         <item>
-          <property name="text">
-           <string>Selecciona</string>
-          </property>
-         </item>
          <item>
           <property name="text">
            <string>Efectivo</string>
@@ -414,36 +399,12 @@ border:none;</string>
           </property>
          </item>
         </widget>
-        <widget class="QPushButton" name="status">
-         <property name="geometry">
-          <rect>
-           <x>1110</x>
-           <y>20</y>
-           <width>331</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
         <widget class="QComboBox" name="comboBox_3">
          <property name="geometry">
           <rect>
-           <x>510</x>
-           <y>160</y>
-           <width>281</width>
+           <x>340</x>
+           <y>210</y>
+           <width>291</width>
            <height>31</height>
           </rect>
          </property>
@@ -501,8 +462,8 @@ border:none;</string>
         <widget class="QLabel" name="label_15">
          <property name="geometry">
           <rect>
-           <x>520</x>
-           <y>130</y>
+           <x>360</x>
+           <y>180</y>
            <width>241</width>
            <height>20</height>
           </rect>
@@ -525,7 +486,108 @@ border:none;</string>
          <property name="geometry">
           <rect>
            <x>1380</x>
-           <y>200</y>
+           <y>210</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+border: none;
+}
+QPushButton::hover{
+background: none;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../IMGS/13.png</normaloff>../IMGS/13.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>19</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="id">
+         <property name="geometry">
+          <rect>
+           <x>1120</x>
+           <y>210</y>
+           <width>311</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: white;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>1220</x>
+           <y>180</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiBold</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:none;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Nombre o ID&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_20">
+         <property name="geometry">
+          <rect>
+           <x>1200</x>
+           <y>110</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: white;</string>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="searchbutton_2">
+         <property name="geometry">
+          <rect>
+           <x>1290</x>
+           <y>110</y>
            <width>51</width>
            <height>31</height>
           </rect>
@@ -550,302 +612,429 @@ border:none;</string>
           </size>
          </property>
         </widget>
-        <widget class="QLineEdit" name="id">
+        <widget class="QLabel" name="label_44">
          <property name="geometry">
           <rect>
-           <x>1120</x>
-           <y>200</y>
-           <width>311</width>
+           <x>1110</x>
+           <y>110</y>
+           <width>91</width>
            <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: white;</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="readOnly">
-          <bool>false</bool>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_3">
-         <property name="geometry">
-          <rect>
-           <x>1220</x>
-           <y>170</y>
-           <width>111</width>
-           <height>20</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Bahnschrift SemiBold</family>
-           <pointsize>9</pointsize>
+           <pointsize>10</pointsize>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:none;</string>
+          <string notr="true">margin-left: 10px;
+border: none;</string>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Nombre o ID&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Tel. Cliente:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="geometry">
-          <rect>
-           <x>140</x>
-           <y>10</y>
-           <width>171</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-right: 1px solid black;</string>
-         </property>
-         <property name="text">
-          <string>Guardar</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/39.png</normaloff>../IMGS/39.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>22</width>
-           <height>22</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QWidget" name="widget_5" native="true">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>10</y>
-           <width>141</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-right: 1px solid black;</string>
-         </property>
-         <property name="text">
-          <string>Imprimir</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/46.png</normaloff>../IMGS/46.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>22</width>
-           <height>22</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_8">
-         <property name="geometry">
-          <rect>
-           <x>460</x>
-           <y>10</y>
-           <width>221</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-right: 1px solid black;</string>
-         </property>
-         <property name="text">
-          <string>Enviar factura por correo</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/45.png</normaloff>../IMGS/45.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>22</width>
-           <height>22</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="clearr">
-         <property name="geometry">
-          <rect>
-           <x>310</x>
-           <y>10</y>
-           <width>151</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-right: 1px solid black;</string>
-         </property>
-         <property name="text">
-          <string>Limpiar</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/38.png</normaloff>../IMGS/38.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>22</width>
-           <height>22</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton">
-         <property name="geometry">
-          <rect>
-           <x>1360</x>
-           <y>20</y>
-           <width>75</width>
-           <height>23</height>
+           <y>0</y>
+           <width>1441</width>
+           <height>71</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">border: none;</string>
+          <string notr="true">#widget_5{
+background:#f4f4f4;
+}</string>
          </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/47.png</normaloff>../IMGS/47.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_9">
-         <property name="geometry">
-          <rect>
-           <x>680</x>
-           <y>10</y>
-           <width>221</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-right: 1px solid black;</string>
-         </property>
-         <property name="text">
-          <string>Trasladar contenido a Excel</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/40.png</normaloff>../IMGS/40.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>22</width>
-           <height>22</height>
-          </size>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_10">
-         <property name="geometry">
-          <rect>
-           <x>900</x>
-           <y>10</y>
-           <width>161</width>
-           <height>41</height>
-           <y>20</y>
-           <width>211</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-border-right: 1px solid black;</string>
-         </property>
-         <property name="text">
-          <string>Reembolsar</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/48.png</normaloff>../IMGS/48.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>22</width>
-           <height>22</height>
-          </size>
-         </property>
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="geometry">
+           <rect>
+            <x>900</x>
+            <y>-10</y>
+            <width>191</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+border-right: 1px solid Gray;
+margin-top: 20px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/48.png</normaloff>../IMGS/48.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="geometry">
+           <rect>
+            <x>680</x>
+            <y>0</y>
+            <width>221</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+border-right: 1px solid Gray;
+margin-top: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/40.png</normaloff>../IMGS/40.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>0</y>
+            <width>221</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+border-right: 1px solid Gray;
+margin-top: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/45.png</normaloff>../IMGS/45.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="clearr">
+          <property name="geometry">
+           <rect>
+            <x>310</x>
+            <y>0</y>
+            <width>151</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+border-right: 1px solid Gray;
+margin-top: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/38.png</normaloff>../IMGS/38.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>0</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+border-right: 1px solid Gray;
+margin-top: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/39.png</normaloff>../IMGS/39.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+border-right: 1px solid Gray;
+margin-top: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/46.png</normaloff>../IMGS/46.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>1370</x>
+            <y>10</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border: none;
+}
+QPushButton::hover{
+background: none;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../IMGS/47.png</normaloff>../IMGS/47.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>40</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left: 6px;</string>
+          </property>
+          <property name="text">
+           <string>GUARDAR</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>40</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left: 10px;</string>
+          </property>
+          <property name="text">
+           <string>LIMPIAR</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>101</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;LIMPIAR&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>480</x>
+            <y>40</y>
+            <width>181</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left: 3px;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ENVIAR FACTURA POR CORREO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>40</y>
+            <width>191</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left: 3px;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXCEL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>900</x>
+            <y>40</y>
+            <width>191</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left: 3px;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;REEMBOLSOS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </widget>
         <zorder>id</zorder>
         <zorder>fecha</zorder>
@@ -856,18 +1045,14 @@ border-right: 1px solid black;</string>
         <zorder>label_10</zorder>
         <zorder>label_7</zorder>
         <zorder>comboBox_2</zorder>
-        <zorder>status</zorder>
         <zorder>comboBox_3</zorder>
         <zorder>label_15</zorder>
         <zorder>searchbutton</zorder>
         <zorder>label_3</zorder>
-        <zorder>pushButton_6</zorder>
-        <zorder>pushButton_7</zorder>
-        <zorder>pushButton_8</zorder>
-        <zorder>clearr</zorder>
-        <zorder>pushButton</zorder>
-        <zorder>pushButton_9</zorder>
-        <zorder>pushButton_10</zorder>
+        <zorder>lineEdit_20</zorder>
+        <zorder>searchbutton_2</zorder>
+        <zorder>label_44</zorder>
+        <zorder>widget_5</zorder>
        </widget>
        <widget class="QWidget" name="formLayoutWidget">
         <property name="geometry">
@@ -1090,7 +1275,7 @@ border:1PX SOLID #A9A9A9;</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>670</y>
+          <y>660</y>
           <width>1439</width>
           <height>278</height>
          </rect>
@@ -1297,50 +1482,6 @@ border: 1px solid red;</string>
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ITBIS:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_20">
-         <property name="geometry">
-          <rect>
-           <x>80</x>
-           <y>50</y>
-           <width>141</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: white;</string>
-         </property>
-         <property name="readOnly">
-          <bool>false</bool>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_44">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>50</y>
-           <width>71</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Bahnschrift Light</family>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">margin-left: 10px;
-border: none;</string>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Cliente:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
         <widget class="QLineEdit" name="lineEdit_21">
          <property name="geometry">
           <rect>
@@ -1457,7 +1598,7 @@ border: none;</string>
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift Light</family>
+           <family>Bahnschrift SemiBold</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -1480,7 +1621,7 @@ border: none;</string>
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift Light</family>
+           <family>Bahnschrift SemiBold</family>
            <pointsize>9</pointsize>
           </font>
          </property>
@@ -1503,7 +1644,7 @@ border: none;</string>
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift Light</family>
+           <family>Bahnschrift SemiBold</family>
            <pointsize>9</pointsize>
           </font>
          </property>
@@ -1526,7 +1667,7 @@ border: none;</string>
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift Light</family>
+           <family>Bahnschrift SemiBold</family>
            <pointsize>9</pointsize>
           </font>
          </property>
@@ -1549,7 +1690,7 @@ border: none;</string>
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift Light</family>
+           <family>Bahnschrift SemiBold</family>
            <pointsize>9</pointsize>
           </font>
          </property>
@@ -1561,39 +1702,98 @@ border: none;</string>
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="searchbutton_2">
+        <widget class="QLabel" name="label_55">
          <property name="geometry">
           <rect>
-           <x>170</x>
-           <y>50</y>
-           <width>51</width>
-           <height>31</height>
+           <x>30</x>
+           <y>60</y>
+           <width>181</width>
+           <height>61</height>
           </rect>
          </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiBold</family>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border: none;</string>
+          <string notr="true">margin-left: 10px;
+border: none;
+border-right: 1px solid black;</string>
          </property>
          <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../IMGS/13.png</normaloff>../IMGS/13.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>19</width>
-           <height>25</height>
-          </size>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Datos del cliente:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </widget>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>840</y>
+      <width>1441</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#widget_3{
+background: white;
+}</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift SemiBold</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Fact No.     000001</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status">
+     <property name="geometry">
+      <rect>
+       <x>1110</x>
+       <y>0</y>
+       <width>331</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift SemiBold</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+margin-top: -10px;
+border: none;
+}
+QPushButton::hover{
+background: none;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
