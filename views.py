@@ -381,16 +381,30 @@ class Suppliers(QMainWindow):
         try:
             super().__init__()
                 # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+
             uic.loadUi("UI/suppliers.ui", self)
-            self.setFixedSize(QSize(920, 735))
+            self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+            self.setFixedSize(QSize(1050, 730))
             self.setWindowTitle("Suplidores")
+            self.newsupplierbutton.clicked.connect(self.open_suppliers)
+
+
+            self.suppliers.setColumnWidth(0, 70)
+            self.suppliers.setColumnWidth(1, 200)
+            self.suppliers.setColumnWidth(2, 160)
+            self.suppliers.setColumnWidth(3, 140)
+            self.suppliers.setColumnWidth(4, 140)
+            self.suppliers.setColumnWidth(5, 160)
+            self.suppliers.setColumnWidth(6, 200)
+
 
         except Exception as e:
             messagebox.showinfo("Ha ocurrido un error inesperado.",
                                 "Ha ocurrido un error inesperado" + str(e))
-
-
-
+    def open_suppliers(self):
+        self.suppliers_window = registersuppliers()
+        self.suppliers_window.move(155, 35)
+        self.suppliers_window.show()
 
 
 class registersuppliers(QMainWindow):
@@ -414,7 +428,7 @@ class registersuppliers(QMainWindow):
 
     def sequencecode(self):
         for number in range(1, 1001):
-            yield f"F-01{number:10}"
+            yield f"P{number:04}"
 
     def close_assets(self):
         self.close()
@@ -439,6 +453,33 @@ class registersuppliers(QMainWindow):
         self.phoneinput.setText("")
         self.emailinput.setText("")
         self.websiteinput.setText("")
+
+class Clients(QMainWindow):
+    def __init__(self):
+        try:
+            super().__init__()
+                # Aquí se carga la interfaz gráfica, SIEMPRE DEBEMOS LLAMAR A SUPER Y AL UIC PARA PODER.
+            uic.loadUi("UI/clients.ui", self)
+            self.setFixedSize(QSize(1050, 730))
+            self.setWindowTitle("Clientes")
+            self.newbutton.clicked.connect(self.open_clients)
+
+            self.suppliers.setColumnWidth(0, 70)
+            self.suppliers.setColumnWidth(1, 200)
+            self.suppliers.setColumnWidth(2, 160)
+            self.suppliers.setColumnWidth(3, 140)
+            self.suppliers.setColumnWidth(4, 140)
+            self.suppliers.setColumnWidth(5, 160)
+            self.suppliers.setColumnWidth(6, 200)
+
+
+        except Exception as e:
+            messagebox.showinfo("Ha ocurrido un error inesperado.",
+                                "Ha ocurrido un error inesperado" + str(e))
+    # def open_registerclients(self):
+    #     self.suppliers_window = registerclients()
+    #     self.suppliers_window.move(155, 35)
+    #     self.suppliers_window.show()
 
 
 class Module_products_un(QMainWindow):
@@ -525,6 +566,7 @@ class Home(QMainWindow):
             self.facturationbutton.clicked.connect(self.open_facturation)
             self.inventorybutton.clicked.connect(self.open_inventory)
             self.suppliersbutton.clicked.connect(self.open_suppliers)
+            self.clientsbutton.clicked.connect(self.open_clients)
             self.facturation = Facturation()
         except Exception as e:
             messagebox.showinfo("Error.",
@@ -548,6 +590,11 @@ class Home(QMainWindow):
 
     def open_suppliers(self):
         self.suppliers_window = Suppliers()
+        self.suppliers_window.move(155, 35)
+        self.suppliers_window.show()
+
+    def open_clients(self):
+        self.suppliers_window = Clients()
         self.suppliers_window.move(155, 35)
         self.suppliers_window.show()
 
