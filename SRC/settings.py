@@ -21,7 +21,7 @@ APP_REQUERIMENTS = (
 
 USER_SESSION = {}
 
-PYTHON_VERSION = "3.11.5 ABAS"
+PYTHON_VERSION = "3.11.5"
 
 with open("JSON/information.json", 'r', encoding="utf-8") as file:
     informations = json.load(file)
